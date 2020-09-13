@@ -1,0 +1,7 @@
+version: "3"
+services:
+  book-locator-frontend:
+    image: book-locator-frontend
+    container_name: "book-locator-frontend"
+    ports:
+      - "80:80"
