@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Paper} from 'snapsvg';
 import {JSONService} from '../../services/json-service';
+import {forkJoin, Observable} from 'rxjs';
 
 @Component({
   selector: 'app-search',
@@ -13,6 +14,9 @@ export class SearchComponent implements OnInit {
   public udk: string;
   private snap: Paper;
 
+  private udkLookupObservable: Observable<any>;
+  private labelLookupObservable: Observable<any>;
+
   private udkLookup: any;
   private labelLookup: any;
 
@@ -20,11 +24,8 @@ export class SearchComponent implements OnInit {
     private route: ActivatedRoute,
     private jsonService: JSONService
   ) {
-    this.jsonService.getJSON('assets/data/udk-lookup.json')
-      .subscribe(res => this.udkLookup = res);
-
-    this.jsonService.getJSON('assets/data/koz_0-lookup.json')
-      .subscribe(res => this.labelLookup = res);
+    this.udkLookupObservable = this.jsonService.getJSON('assets/data/udk-lookup.json');
+    this.labelLookupObservable = this.jsonService.getJSON('assets/data/koz_0-lookup.json');
   }
 
   ngOnInit(): void {
@@ -36,7 +37,13 @@ export class SearchComponent implements OnInit {
 
       this.snap = Snap(svg);
 
-      this.highlightLocation(this.udk);
+      forkJoin([this.labelLookupObservable, this.udkLookupObservable])
+        .subscribe(([labelLookup, udkLookup]) => {
+          this.labelLookup = labelLookup;
+          this.udkLookup = udkLookup;
+
+          this.highlightLocation(this.udk);
+        });
     }, false);
 
     this.route.queryParamMap.subscribe(qp => {
