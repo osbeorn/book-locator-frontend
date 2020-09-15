@@ -97,7 +97,6 @@ export class SearchComponent implements OnInit {
             .attr({
               fill: '#930042'
             })
-            .anim
             .append(title);
         }
       });
