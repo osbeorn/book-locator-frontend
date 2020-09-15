@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {Paper} from 'snapsvg';
 import {JSONService} from '../../services/json-service';
 import {forkJoin, Observable} from 'rxjs';
+import {Udk} from '../../models/udk.model';
 
 @Component({
   selector: 'app-search',
@@ -74,14 +75,14 @@ export class SearchComponent implements OnInit {
     const parsedUdk = this.parseUdk(udk);
 
     const udkName = this.udkLookup
-      .filter(l => l.id.toLowerCase().replace(/\s/g, '') === parsedUdk)
+      .filter(l => l.id.toLowerCase().replace(/\s/g, '') === parsedUdk.u)
       .map(l => l.name)
       .find(l => l);
 
     this.labelLookup
       .filter(l => l.udks
         .map(u => u.toLowerCase().replace(/\s/g, ''))
-        .includes(parsedUdk)
+        .includes(parsedUdk.toString())
       )
       .map(l => l.label)
       .forEach(l => {
@@ -102,25 +103,17 @@ export class SearchComponent implements OnInit {
       });
   }
 
-  private parseUdk(udk: string): string {
+  private parseUdk(udk: string): Udk {
     const l = this.getUdkAttribute(udk, 'L'); // lokacija
     const i = this.getUdkAttribute(udk, 'I');
     const u = this.getUdkAttribute(udk, 'U');
     const a = this.getUdkAttribute(udk, 'A');
 
-    let parsedUdk = '';
-    if (i) {
-      parsedUdk += i.toLowerCase().replace(/\s/g, '');
-    }
-    if (u) {
-      parsedUdk += u.toLowerCase().replace(/\s/g, '');
-    }
-    if (a) {
-      parsedUdk += a.toLowerCase().replace(/\s/g, '');
-    }
-    parsedUdk = parsedUdk.trim();
+    const values = {
+      l, i, u, a
+    };
 
-    return parsedUdk;
+    return new Udk(values);
   }
 
   private getUdkAttribute(udk: string, attribute: string): string {
