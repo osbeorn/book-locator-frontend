@@ -1,6 +1,350 @@
 [
   {
-    "id": "821.2",
-    "name": "Književnost"
+    "id": "80/81",
+    "name": "Jezikoslovje - splošno"
+  },
+  {
+    "id": "811 ang",
+    "name": "Angleščina - jezikoslovje"
+  },
+  {
+    "id": "811 fra",
+    "name": "Francoščina - jezikoslovje"
+  },
+  {
+    "id": "811 ita",
+    "name": "Italijanščina - jezikoslovje"
+  },
+  {
+    "id": "811 gr+lat",
+    "name": "Latinščina in klasična grščina"
+  },
+  {
+    "id": "811 nem",
+    "name": "Nemščina - jezikoslovje"
+  },
+  {
+    "id": "811 rus",
+    "name": "Ruščina - jezikoslovje"
+  },
+  {
+    "id": "811 slo",
+    "name": "Slovenščina - jezikoslovje"
+  },
+  {
+    "id": "811 slot",
+    "name": "Slovenščina za tujce"
+  },
+  {
+    "id": "811 shb",
+    "name": "Srbščina, hrvaščina, bosanščina - jezikoslovje"
+  },
+  {
+    "id": "811 špa",
+    "name": "Španščina - jezikoslovje"
+  },
+  {
+    "id": "811 ost",
+    "name": "Jezikoslovje drugih posameznih jezikov"
+  },
+  {
+    "id": "s 811",
+    "name": "slovarji"
+  },
+  {
+    "id": "808",
+    "name": "Retorika. Kreativno pisanje"
+  },
+  {
+    "id": "82",
+    "name": "Literarna teorija. Kritike"
+  },
+  {
+    "id": "821.09",
+    "name": "Literarna zgodovina in literarne študije"
+  },
+  {
+    "id": "821.09 slo",
+    "name": "Zgodovina in študije slovenske književnosti"
+  },
+  {
+    "id": "821.09 ang",
+    "name": "Zgodovina in študije angleške književnosti"
+  },
+  {
+    "id": "821.09 fra",
+    "name": "Zgodovina in študije francoske književnosti"
+  },
+  {
+    "id": "821.09 ita",
+    "name": "Zgodovina in študije italijanske književnosti"
+  },
+  {
+    "id": "821.09 gr+lat",
+    "name": "Zgodovina in študije latinske in starogrške književnosti"
+  },
+  {
+    "id": "821.09 nem",
+    "name": "Zgodovina in študije nemške književnosti"
+  },
+  {
+    "id": "821.09 rus",
+    "name": "Zgodovina in študije ruske književnosti"
+  },
+  {
+    "id": "821.09 shb",
+    "name": "Zgodovina in študije srbske, hrvaške in bosanske književnosti"
+  },
+  {
+    "id": "821.09 špa",
+    "name": "Zgodovina in študije španske književnosti"
+  },
+  {
+    "id": "398",
+    "name": "Ljudsko slovstvo"
+  },
+  {
+    "id": "398 slo",
+    "name": "Slovensko ljudsko slovstvo"
+  },
+  {
+    "id": "821-311.2",
+    "name": "Družbeni romani"
+  },
+  {
+    "id": "821-311.2 slo",
+    "name": "Slovenski družbeni romani"
+  },
+  {
+    "id": "821-32",
+    "name": "Kratka proza"
+  },
+  {
+    "id": "821-32 slo",
+    "name": "Slovenska kratka proza"
+  },
+  {
+    "id": "821-312.4",
+    "name": "Kriminalni romani in novele"
+  },
+  {
+    "id": "821-312.4 slo",
+    "name": "Slovenski kriminalni romani in novele"
+  },
+  {
+    "id": "821-311.3",
+    "name": "Pustolovski romani"
+  },
+  {
+    "id": "821-311.3 slo",
+    "name": "Slovenski pustolovski romani"
+  },
+  {
+    "id": "821-311.6",
+    "name": "Zgodovinski in vojni romani"
+  },
+  {
+    "id": "821-311.6 slo",
+    "name": "Slovenski zgodovinski in vojni romani"
+  },
+  {
+    "id": "821-7",
+    "name": "Satirični romani. Humor. Anekdote"
+  },
+  {
+    "id": "821-7 slo",
+    "name": "Slovenski satirični romani. Humor. Anekdote"
+  },
+  {
+    "id": "821-312.9",
+    "name": "Znanstvena fantastika. Fantastični romani in novele"
+  },
+  {
+    "id": "821-312.9 slo",
+    "name": "Slovenska znanstvena fantastika. Fantastični romani in novele"
+  },
+  {
+    "id": "821-312.6",
+    "name": "Biografski romani"
+  },
+  {
+    "id": "821-312.6 slo",
+    "name": "Slovenski biografski romani"
+  },
+  {
+    "id": "821-1",
+    "name": "Poezija"
+  },
+  {
+    "id": "821-1 slo",
+    "name": "Slovenska poezija"
+  },
+  {
+    "id": "821-2",
+    "name": "Dramatika"
+  },
+  {
+    "id": "821-2 slo",
+    "name": "Slovenska dramatika"
+  },
+  {
+    "id": "821 A-Ž",
+    "name": "Zbrana in izbrana dela"
+  },
+  {
+    "id": "821 A-Ž slo",
+    "name": "Slovenska zbrana in izbrana dela"
+  },
+  {
+    "id": "821-4",
+    "name": "Eseji"
+  },
+  {
+    "id": "821-4 slo",
+    "name": "Slovenski eseji"
+  },
+  {
+    "id": "821-5/-6",
+    "name": "Govori, pisma"
+  },
+  {
+    "id": "821-5/-6 slo",
+    "name": "Slovenski govori, pisma"
+  },
+  {
+    "id": "821-82",
+    "name": "Antologije. Poligrafije"
+  },
+  {
+    "id": "821-82 slo",
+    "name": "Slovenske antologije. Poligrafije"
+  },
+  {
+    "id": "821-84",
+    "name": "Aforizmi. Misli. Pregovori"
+  },
+  {
+    "id": "821-84 slo",
+    "name": "Slovenski aforizmi. Misli. Pregovori"
+  },
+  {
+    "id": "821-94",
+    "name": "Spomini. Dnevniki. Reportaže"
+  },
+  {
+    "id": "821-94 slo",
+    "name": "Slovenski spomini. Dnevniki. Reportaže. Kolumne"
+  },
+  {
+    "id": "821-992",
+    "name": "Potopisi"
+  },
+  {
+    "id": "821-992 slo",
+    "name": "Slovenski potopisi"
+  },
+  {
+    "id": "",
+    "name": "Skupine za leposlovje v tujih jezikih"
+  },
+  {
+    "id": "821-311.2=ang",
+    "name": "Družbeni romani v angleščini"
+  },
+  {
+    "id": "821-32=ang",
+    "name": "Kratka proza v angleščini"
+  },
+  {
+    "id": "821-312.4=ang",
+    "name": "Kriminalni romani in novele v angleščini"
+  },
+  {
+    "id": "821-311.3=ang",
+    "name": "Pustolovski romani v angleščini"
+  },
+  {
+    "id": "821-311.6=ang",
+    "name": "Zgodovinski in vojni romani v angleščini"
+  },
+  {
+    "id": "821-7=ang",
+    "name": "Satirični romani. Humor. Anekdote v angleščini"
+  },
+  {
+    "id": "821-312.9=ang",
+    "name": "Znanstvena fantastika. Fantastični romani in novele v angleščini"
+  },
+  {
+    "id": "821-312.6=ang",
+    "name": "Biografski romani v angleščini"
+  },
+  {
+    "id": "821-1=ang",
+    "name": "Poezija v angleščini"
+  },
+  {
+    "id": "821-2=ang",
+    "name": "Dramatika v angleščini"
+  },
+  {
+    "id": "821A-Ž=ang",
+    "name": "Zbrana in izbrana dela v angleščini"
+  },
+  {
+    "id": "821-4=ang",
+    "name": "Eseji v angleščini"
+  },
+  {
+    "id": "821-5/-6=ang",
+    "name": "Govori, pisma v angleščini"
+  },
+  {
+    "id": "821-82=ang",
+    "name": "Antologije. Poligrafije v angleščini"
+  },
+  {
+    "id": "821-84=ang",
+    "name": "Aforizmi. Misli. Pregovori v angleščini"
+  },
+  {
+    "id": "821-94=ang",
+    "name": "Spomini. Dnevniki. Reportaže v angleščini"
+  },
+  {
+    "id": "821-992=ang",
+    "name": "Potopisi v angleščini"
+  },
+  {
+    "id": "8(0.046) ang 3",
+    "name": "Poenostavljene angleške izdaje (prim. za 3. stopnjo)"
+  },
+  {
+    "id": "8(0.046) nem",
+    "name": "Poenostavljene nemške izdaje (brez stopenj)"
+  },
+  {
+    "id": "8(0.046) fra",
+    "name": "Poenostavljene francoske izdaje (brez stopenj)"
+  },
+  {
+    "id": "8(0.046) ita",
+    "name": "Poenostavljene italijanske izdaje (brez stopenj)"
+  },
+  {
+    "id": "8(0.046) slo",
+    "name": "Poenostavljene izdaje v slovenščini (brez stopenj)"
+  },
+  {
+    "id": "8(0.046) špa",
+    "name": "Poenostavljene španske izdaje (brez stopenj)"
+  },
+  {
+    "id": "8(0.046) rus",
+    "name": "Poenostavljene ruske izdaje (brez stopenj)"
+  },
+  {
+    "id": "8(0.046) ost",
+    "name": "Poenostavljene izdaje drugih jezikov (brez stopenj)"
   }
 ]

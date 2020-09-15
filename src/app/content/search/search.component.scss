@@ -1,8 +1,17 @@
 .wrapper {
   background: url("../../../assets/img/bg_default.png") repeat 0 0 transparent;
+  height: 100vh;
 
-  .floor-plan {
-    display: block;
-    margin: 0 auto;
+  .floor-plan-container {
+    width: 100%;
+
+    .floor-plan {
+      display: block;
+      margin: 0 auto;
+
+      &.zoom-out {
+        height: 80vh;
+      }
+    }
   }
 }

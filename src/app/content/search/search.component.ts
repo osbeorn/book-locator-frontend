@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Paper} from 'snapsvg';
 import {JSONService} from '../../services/json-service';
@@ -12,6 +12,8 @@ import {forkJoin, Observable} from 'rxjs';
 export class SearchComponent implements OnInit {
 
   public udk: string;
+  public zoomedIn: boolean = false;
+
   private snap: Paper;
 
   private udkLookupObservable: Observable<any>;
@@ -22,7 +24,8 @@ export class SearchComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private jsonService: JSONService
+    private jsonService: JSONService,
+    private changeDetector: ChangeDetectorRef
   ) {
     this.udkLookupObservable = this.jsonService.getJSON('assets/data/udk-lookup.json');
     this.labelLookupObservable = this.jsonService.getJSON('assets/data/koz_0-lookup.json');
@@ -36,6 +39,14 @@ export class SearchComponent implements OnInit {
       const svg = svgDocument.getElementById('floor-plan');
 
       this.snap = Snap(svg);
+      this.snap.attr({
+        style: 'cursor: zoom-in;'
+      });
+
+      this.snap.click(() => {
+        this.doZoom();
+        this.changeDetector.detectChanges();
+      }, this);
 
       forkJoin([this.labelLookupObservable, this.udkLookupObservable])
         .subscribe(([labelLookup, udkLookup]) => {
@@ -51,11 +62,19 @@ export class SearchComponent implements OnInit {
     });
   }
 
+  private doZoom(): void {
+    this.zoomedIn = !this.zoomedIn;
+
+    this.snap.attr({
+      style: `cursor: zoom-${this.zoomedIn ? 'out' : 'in'}`
+    });
+  }
+
   private highlightLocation(udk: string): void {
-    let parsedUdk = this.parseUdk(udk);
+    const parsedUdk = this.parseUdk(udk);
 
     const udkName = this.udkLookup
-      .filter(l => l.id === parsedUdk)
+      .filter(l => l.id.toLowerCase().replace(/\s/g, '') === parsedUdk)
       .map(l => l.name)
       .find(l => l);
 
@@ -78,6 +97,7 @@ export class SearchComponent implements OnInit {
             .attr({
               fill: '#930042'
             })
+            .anim
             .append(title);
         }
       });

@@ -3,11 +3,13 @@
     Iskanje gradiva
   </h3>
 
-  <object id="svg-object"
-          type="image/svg+xml"
-          data="../../../assets/img/floor-plans/5/floor-plan_L.svg"
-          class="floor-plan">
+  <div class="floor-plan-container">
+    <object id="svg-object"
+            type="image/svg+xml"
+            data="../../../assets/img/floor-plans/5/floor-plan_L.svg"
+            class="floor-plan" [ngClass]="{ 'zoom-out': !zoomedIn }">
 
-    <!-- fallback image in CSS -->
-  </object>
+      <!-- fallback image in CSS -->
+    </object>
+  </div>
 </div>
