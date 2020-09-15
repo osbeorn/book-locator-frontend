@@ -9,5 +9,8 @@ $fa-font-path: "/assets/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
 // Global styles
+html, body {
+  height: 100%;
+}
 
 
