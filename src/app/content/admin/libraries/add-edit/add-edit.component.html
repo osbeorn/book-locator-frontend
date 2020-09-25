@@ -1,0 +1,54 @@
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">
+    {{ id ? 'Urejanje knjižnice' : 'Dodajanje knjižnice' }}
+  </h1>
+</div>
+
+<!-- Content Row -->
+<div class="row">
+  <div class="col-12">
+    <div class="card shadow">
+      <div class="card-header">
+        Knjižnica
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #libraryForm="ngForm" novalidate>
+        <div class="row">
+          <div class="col-12 form-group">
+            <label for="code">Šifra</label>
+            <input type="text" class="form-control" id="code" required
+                   [(ngModel)]="library.code" name="code" #code="ngModel" [class.is-invalid]="code.invalid && code.dirty">
+            <div [hidden]="code.valid || code.pristine" class="invalid-feedback">
+              Podatek je obvezen
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 form-group">
+            <label for="name">Naziv</label>
+            <input type="text" class="form-control" id="name" required
+                   [(ngModel)]="library.name" name="name" #name="ngModel" [class.is-invalid]="name.invalid && name.dirty">
+            <div [hidden]="name.valid || name.pristine" class="invalid-feedback">
+              Podatek je obvezen
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary mr-2" [disabled]="!libraryForm.form.valid"
+                    [ladda]="ladda.createOrUpdateLibraryInProgress">
+              Potrdi
+            </button>
+            <a class="btn btn-light" [routerLink]="['/', 'admin', 'libraries']">
+              Prekliči
+            </a>
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">
+    {{ floorId ? 'Urejanje nadstropja' : 'Dodajanje nadstropja' }}
+  </h1>
+</div>
+
+<!-- Content Row -->
+<div class="row">
+  <div class="col-12">
+    <div class="card shadow">
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #floorForm="ngForm" novalidate>
+          <div class="row">
+            <div class="col-12 form-group">
+              <label for="code">Šifra</label>
+              <input type="text" class="form-control" id="code" required
+                     [(ngModel)]="floor.code" name="code" #code="ngModel" [class.is-invalid]="code.invalid && code.dirty">
+              <div [hidden]="code.valid || code.pristine" class="invalid-feedback">
+                Podatek je obvezen
+              </div>
+            </div>
+
+            <div class="col-12 form-group">
+              <label for="name">Naziv</label>
+              <input type="text" class="form-control" id="name" required
+                     [(ngModel)]="floor.name" name="name" #name="ngModel" [class.is-invalid]="name.invalid && name.dirty">
+              <div [hidden]="name.valid || name.pristine" class="invalid-feedback">
+                Podatek je obvezen
+              </div>
+            </div>
+
+            <div class="col-12 form-group">
+              <label for="rack-code-identifier">Atribut oznake regalov</label>
+              <input type="text" id="rack-code-identifier" required
+                     [(ngModel)]="floor.rackCodeIdentifier" #rackCodeAttribute="ngModel" name="rack-code-identifier" class="form-control">
+              <div [hidden]="rackCodeAttribute.valid || rackCodeAttribute.pristine" class="invalid-feedback">
+                Podatek je obvezen
+              </div>
+            </div>
+
+            <div class="col-12 form-group">
+              <label for="floor-plan-file">Tloris</label>
+              <div class="input-group">
+                <div class="custom-file">
+                  <input type="file" id="floor-plan-file" #floorPlanFileInput lang="si" (change)="floorPlanFileChanged($event)"
+                         name="floor-plan" class="custom-file-input" accept="image/svg+xml">
+                  <label class="custom-file-label" for="floor-plan-file">
+                    {{ floorPlanFile?.name }}
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary mr-2" [disabled]="!floorForm.form.valid"
+                      [ladda]="ladda.createOrUpdateFloorInProgress">
+                Potrdi
+              </button>
+              <a class="btn btn-light" [routerLink]="['/', 'admin', 'libraries', libraryId]">
+                Prekliči
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

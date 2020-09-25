@@ -1,20 +1,19 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {SearchComponent} from './content/search/search.component';
+import {route as adminRoute} from './content/admin/routes';
+import {route as searchRoute} from './content/search/routes';
 
 const routes: Routes = [
-  {
-    path: 'search',
-    component: SearchComponent
-  },
+  adminRoute,
+  searchRoute,
   {
     path: '',
-    redirectTo: '/search', pathMatch: 'full'
+    redirectTo: 'search', pathMatch: 'full'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {paramsInheritanceStrategy: 'always'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

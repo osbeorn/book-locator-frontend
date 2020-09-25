@@ -1,0 +1,105 @@
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">
+    <small class="d-block text-muted">{{library.name}} ({{library.code}})</small>
+    {{floor.name}} ({{floor.code}})
+  </h1>
+</div>
+
+<!-- Content Row -->
+<div class="row">
+  <div class="col-12">
+    <div class="card shadow">
+      <div class="card-header">
+        Nastavitve
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12 form-group">
+            <label for="rack-code-identifier">Atribut oznake regalov</label>
+            <input type="text" id="rack-code-identifier" readonly
+                   [(ngModel)]="floor.rackCodeIdentifier" name="rack-code-identifier" class="form-control">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <div class="card shadow mt-4">
+      <div class="card-header">
+        Lokacije gradiva
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12">
+
+              </div>
+              <div class="col-lg-4 col-md-6 col-12" *ngIf="selectedRack">
+                <div class="row">
+                  <div class="col-12">
+                    <label>Regal: <strong>{{selectedRack.rack.code}}</strong></label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12" [class.mt-2]="!first" *ngFor="let rackContent of selectedRack.rack.contents; let index = index; let first = first; let last = last">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <button type="button" class="btn btn-outline-secondary"
+                                [(ngModel)]="rackContent.regex" btnCheckbox
+                                [btnCheckboxTrue]="true" [btnCheckboxFalse]="false">
+                          RegEx
+                          <i class="fa fa-fw fa-xs"
+                             [ngClass]="{ 'fa-check': rackContent.regex, 'fa-times': !rackContent.regex }">
+                          </i>
+                        </button>
+                      </div>
+
+                      <input type="text" class="form-control" [(ngModel)]="rackContent.identifier">
+
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" (click)="removeRackContent(index)">
+                          <i class="fa fa-xs fa-minus"></i>
+                        </button>
+                        <button *ngIf="last" class="btn btn-outline-secondary" type="button" (click)="addRackContent()">
+                          <i class="fa fa-xs fa-plus"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+<!--                  <div class="col-12 mt-2"> TODO -->
+<!--                    <div>-->
+<!--                      <button type="button" class="btn btn-secondary mr-2">-->
+<!--                        <i class="fa fa-arrow-left"></i>-->
+<!--                      </button>-->
+<!--                      <button type="button" class="btn btn-secondary">-->
+<!--                        <i class="fa fa-arrow-right"></i>-->
+<!--                      </button>-->
+<!--                    </div>-->
+<!--                  </div>-->
+                </div>
+              </div>
+
+              <div class="col-12" [ngClass]="{ 'col-lg-8 col-md-6': selectedRack }">
+                <div class="floor-plan-container"
+                     [inlineSVG]="floorPlanUrl" (onSVGInserted)="processFloorPlan()">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <button type="button" class="btn btn-primary" (click)="saveRacks()" [ladda]="ladda.saveRacksInProgress">
+              Shrani
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

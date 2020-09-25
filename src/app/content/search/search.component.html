@@ -1,15 +1,11 @@
-<div class="wrapper">
-  <h3 class="text-center pt-3 mb-5">
-    Iskanje gradiva
-  </h3>
+<div id="wrapper">
+  <div id="content-wrapper" class="d-flex flex-column">
+    <h3 class="text-center pt-3 mb-5">
+      Iskanje gradiva
+    </h3>
 
-  <div class="floor-plan-container">
-    <object id="svg-object"
-            type="image/svg+xml"
-            data="../../../assets/img/floor-plans/5/floor-plan_L.svg"
-            class="floor-plan" [ngClass]="{ 'zoom-out': !zoomedIn }">
-
-      <!-- fallback image in CSS -->
-    </object>
+    <div class="floor-plan-container" [ngClass]="{ 'zoom-out': !zoomedIn }"
+         [inlineSVG]="floorPlanUrl" (onSVGInserted)="processFloorPlan()">
+    </div>
   </div>
 </div>

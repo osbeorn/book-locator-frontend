@@ -1,0 +1,61 @@
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">
+    {{library.name}} ({{library.code}})
+  </h1>
+  <a routerLink="../floors/add" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+    <i class="fas fa-plus fa-sm text-white-50"></i>
+    &nbsp;Dodaj nadstropje
+  </a>
+</div>
+
+<!-- Content Row -->
+<div class="row">
+  <div class="col-12">
+    <div class="card shadow">
+      <div class="card-header">
+        Nadstropja
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12">
+            <p-table #dt styleClass="p-datatable-sm"
+                     [value]="floors" [rows]="maxFloors" [totalRecords]="totalFloors"
+                     [lazy]="true" [loading]="loadingFloors" (onLazyLoad)="loadFloors($event)" [filterDelay]="300"
+                     [stateStorage]="'local'" [stateKey]="'book-locator.tables.floors'" [rowHover]="true" >
+              <ng-template pTemplate="header">
+                <tr>
+                  <th pSortableColumn="code">Šifra <p-sortIcon field="code"></p-sortIcon></th>
+                  <th pSortableColumn="name">Naziv <p-sortIcon field="name"></p-sortIcon></th>
+                  <th></th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-floor>
+                <tr>
+                  <td>{{floor.code}}</td>
+                  <td>{{floor.name}}</td>
+                  <td>
+                    <a class="btn btn-primary btn-sm btn-circle mr-2" [routerLink]="['floors', floor.id]">
+                      <i class="fas fa-search fa-fw"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm btn-circle" [routerLink]="['floors', floor.id, 'edit']">
+                      <i class="fas fa-pencil-alt fa-fw"></i>
+                    </a>
+                  </td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </div>
+        </div>
+
+        <!--        <div class="row">-->
+        <!--          <div class="col-12">-->
+        <!--            <button type="button" class="btn btn-danger" (click)="confirmDeleteLibrary()">-->
+        <!--              Izbriši-->
+        <!--            </button>-->
+        <!--          </div>-->
+        <!--        </div>-->
+      </div>
+    </div>
+  </div>
+</div>

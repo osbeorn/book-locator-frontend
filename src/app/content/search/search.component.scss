@@ -1,17 +1,14 @@
-.wrapper {
-  background: url("../../../assets/img/bg_default.png") repeat 0 0 transparent;
+#wrapper #content-wrapper {
+  background: #f8f9fc;
   min-height: 100vh;
 
   .floor-plan-container {
     width: 100%;
+    display: block;
+    margin: 0 auto;
 
-    .floor-plan {
-      display: block;
-      margin: 0 auto;
-
-      &.zoom-out {
-        height: 85vh;
-      }
+    &.zoom-out {
+      height: 85vh;
     }
   }
 }

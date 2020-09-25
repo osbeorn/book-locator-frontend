@@ -1,9 +1,12 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Paper} from 'snapsvg';
-import {JSONService} from '../../services/json-service';
-import {forkJoin, Observable} from 'rxjs';
-import {Udk} from '../../models/udk.model';
+import {LookupService} from '../../services/lookup.service';
+import {SearchService} from '../../services/search.service';
+import {FloorService} from '../../services/floor.service';
+import {Library} from '../../models/library.model';
+import {Floor} from '../../models/floor.model';
+import {Rack} from '../../models/rack.model';
 
 @Component({
   selector: 'app-search',
@@ -12,54 +15,42 @@ import {Udk} from '../../models/udk.model';
 })
 export class SearchComponent implements OnInit {
 
-  public udk: string;
+  public query: string;
   public zoomedIn: boolean = false;
+
+  public library: Library = {};
+  public floor: Floor = {};
+  public racks: Rack[] = [];
+  public udkName: string;
+
+  public floorPlanUrl: string;
 
   private snap: Paper;
 
-  private udkLookupObservable: Observable<any>;
-  private labelLookupObservable: Observable<any>;
-
-  private udkLookup: any;
-  private labelLookup: any;
-
   constructor(
     private route: ActivatedRoute,
-    private jsonService: JSONService,
+    private lookupService: LookupService,
+    private searchService: SearchService,
+    private floorService: FloorService,
     private changeDetector: ChangeDetectorRef
   ) {
-    this.udkLookupObservable = this.jsonService.getJSON('assets/data/udk-lookup.json');
-    this.labelLookupObservable = this.jsonService.getJSON('assets/data/koz_0-lookup.json');
   }
 
   ngOnInit(): void {
-    const svgObject = document.getElementById('svg-object');
-
-    svgObject.addEventListener('load', () => {
-      const svgDocument = svgObject['contentDocument'];
-      const svg = svgDocument.getElementById('floor-plan');
-
-      this.snap = Snap(svg);
-      this.snap.attr({
-        style: 'cursor: zoom-in;'
-      });
-
-      this.snap.click(() => {
-        this.doZoom();
-        this.changeDetector.detectChanges();
-      }, this);
-
-      forkJoin([this.labelLookupObservable, this.udkLookupObservable])
-        .subscribe(([labelLookup, udkLookup]) => {
-          this.labelLookup = labelLookup;
-          this.udkLookup = udkLookup;
-
-          this.highlightLocation(this.udk);
-        });
-    }, false);
-
     this.route.queryParamMap.subscribe(qp => {
-      this.udk = qp.get('udk');
+      this.query = qp.get('q');
+
+      this.searchService.getSearchResponse(this.query)
+        .subscribe(res => {
+          if (res) {
+            this.library = res.library;
+            this.floor = res.floor;
+            this.racks = res.racks;
+            this.udkName = res.udkName;
+
+            this.floorPlanUrl = this.floorService.getFloorPlanUrl(res.floor.id);
+          }
+        });
     });
   }
 
@@ -71,26 +62,32 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  private highlightLocation(udk: string): void {
-    const parsedUdk = this.parseUdk(udk);
+  public processFloorPlan(): void {
+    this.snap = Snap('.floor-plan-container > svg');
 
-    const udkName = this.udkLookup
-      .filter(l => l.id.toLowerCase().replace(/\s/g, '') === parsedUdk.u)
-      .map(l => l.name)
-      .find(l => l);
+    this.snap
+      .attr({
+        style: 'cursor: zoom-in;'
+      })
+      .addClass('h-100 m-auto d-block');
 
-    this.labelLookup
-      .filter(l => l.udks
-        .map(u => u.toLowerCase().replace(/\s/g, ''))
-        .includes(parsedUdk.toString())
-      )
-      .map(l => l.label)
-      .forEach(l => {
-        const element = this.snap.select(`[data-label="${l}"]`);
+    this.snap.click(() => {
+      this.doZoom();
+
+      this.changeDetector.detectChanges();
+    }, this);
+
+    this.highlightLocation();
+  }
+
+  private highlightLocation(): void {
+    this.racks
+      .forEach(r => {
+        const element = this.snap.select(`[${this.floor.rackCodeIdentifier}="${r.code}"]`);
 
         const title = this.snap.el('title', {});
-        if (udkName) {
-          title.node.innerHTML = udkName;
+        if (this.udkName) {
+          title.node.innerHTML = this.udkName;
         }
 
         if (element) {
@@ -101,30 +98,5 @@ export class SearchComponent implements OnInit {
             .append(title);
         }
       });
-  }
-
-  private parseUdk(udk: string): Udk {
-    const l = this.getUdkAttribute(udk, 'L'); // lokacija
-    const i = this.getUdkAttribute(udk, 'I');
-    const u = this.getUdkAttribute(udk, 'U');
-    const a = this.getUdkAttribute(udk, 'A');
-
-    const values = {
-      l, i, u, a
-    };
-
-    return new Udk(values);
-  }
-
-  private getUdkAttribute(udk: string, attribute: string): string {
-    if (!udk) {
-      return null;
-    }
-
-    return udk
-      .split('_')
-      .filter(x => x.startsWith(attribute))
-      .map(x => x.substring(1))
-      .find(x => x);
   }
 }

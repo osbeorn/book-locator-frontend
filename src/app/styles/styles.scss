@@ -1,5 +1,38 @@
+// Import Custom SB Admin 2 Variables (Overrides Default Bootstrap Variables)
+@import "sb-admin2/variables.scss";
+
 // Bootstrap and its default variables
 @import "~bootstrap/scss/bootstrap";
+
+// Import Custom SB Admin 2 Mixins and Components
+@import "sb-admin2/mixins.scss";
+@import "sb-admin2/global.scss";
+@import "sb-admin2/utilities.scss";
+
+// Custom Components
+@import "sb-admin2/dropdowns.scss";
+@import "sb-admin2/navs.scss";
+@import "sb-admin2/buttons.scss";
+@import "sb-admin2/cards.scss";
+@import "sb-admin2/charts.scss";
+@import "sb-admin2/login.scss";
+@import "sb-admin2/error.scss";
+@import "sb-admin2/footer.scss";
+
+// PrimeNG
+@import "~primeng/resources/primeng.css";
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/themes/bootstrap4-light-blue/theme.css";
+
+// ladda
+@import "~ladda/dist/ladda.min.css";
+
+// PrimeNG variable overrides
+:root {
+  --primary-color:#4e73df;
+  --primary-color-text:#ffffff;
+  --font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
 
 $fa-font-path: "/assets/webfonts";
 
@@ -11,4 +44,8 @@ $fa-font-path: "/assets/webfonts";
 // Global styles
 html, body {
   min-height: 100vh;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  border: none;
 }
