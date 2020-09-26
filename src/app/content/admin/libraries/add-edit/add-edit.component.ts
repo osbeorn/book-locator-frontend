@@ -11,10 +11,10 @@ import {finalize} from 'rxjs/operators';
 })
 export class AddEditComponent implements OnInit {
 
-  mode: Mode;
+  mode: Mode = Mode.ADD;
   id: string;
 
-  library: Library;
+  library: Library = {};
 
   ladda: any = {
     createOrUpdateLibraryInProgress: false
@@ -28,9 +28,6 @@ export class AddEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.mode = Mode.ADD;
-    this.library = {};
-
     this.route.paramMap.subscribe(p => {
       if (p.has('libraryId')) {
         this.mode = Mode.EDIT;

@@ -19,11 +19,11 @@ export class AddEditComponent implements OnInit {
   @ViewChild('floorForm', { static: false })
   private floorForm: NgForm;
 
-  mode: Mode;
+  mode: Mode = Mode.ADD;
   libraryId: string;
   floorId: string;
 
-  floor: Floor;
+  floor: Floor = {};
 
   floorPlanFile: File;
 
@@ -40,9 +40,6 @@ export class AddEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.mode = Mode.ADD;
-    this.floor = {};
-
     this.route.paramMap.subscribe(p => {
       if (p.has('libraryId')) {
         this.libraryId = p.get('libraryId');

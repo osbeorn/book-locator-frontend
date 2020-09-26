@@ -27,6 +27,9 @@ import {InlineSVGModule} from 'ng-inline-svg';
 import {ButtonsModule} from 'ngx-bootstrap/buttons';
 import {LaddaModule} from 'angular2-ladda';
 import {SearchService} from './services/search.service';
+import {LoginComponent} from './content/login/login.component';
+import {AuthService} from './services/auth.service';
+import {AuthGuard} from './content/guards/auth.guard';
 
 declare global {
   const Snap: typeof snap;
@@ -45,7 +48,8 @@ declare global {
     FloorsComponent,
     FloorAddEditComponent,
     ViewComponent,
-    FloorDetailsComponent
+    FloorDetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -65,9 +69,12 @@ declare global {
     })
   ],
   providers: [
+    AuthGuard,
+
+    AuthService,
+    FloorService,
     LibraryService,
     LookupService,
-    FloorService,
     SearchService
   ],
   bootstrap: [AppComponent]
