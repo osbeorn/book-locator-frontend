@@ -90,7 +90,7 @@ export class AddEditComponent implements OnInit {
           }
         });
     } else if (this.floorId && this.mode === Mode.EDIT) {
-      this.floorService.patchFloor(this.floorId, this.floor)
+      this.floorService.patchFloor(this.floorId, this.floor, !formData)
         .pipe(
           finalize(() => this.ladda.createOrUpdateFloorInProgress = false)
         )

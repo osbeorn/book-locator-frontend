@@ -19,8 +19,16 @@ export class FloorService {
     return this.http.get<Floor>(`${this.url}/${id}`);
   }
 
-  public patchFloor(id: string, floor: Floor): Observable<Floor> {
-    return this.http.patch(`${this.url}/${id}`, floor);
+  public patchFloor(id: string, floor: Floor, processFloorPlan?: boolean): Observable<Floor> {
+    const params: any = {
+      processFloorPlan: null
+    };
+
+    if (processFloorPlan) {
+      params.processFloorPlan = processFloorPlan;
+    }
+
+    return this.http.patch(`${this.url}/${id}`, floor, { params });
   }
 
   public getFloorRacks(id: string, fields?: string, filter?: string, order?: string, offset?: number, limit?: number): Observable<HttpResponse<Rack[]>> {

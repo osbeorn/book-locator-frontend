@@ -59,7 +59,7 @@
        height="2.6458335"
        x="11.307714"
        y="5.6179028"
-       data-label="r1" />
+       data-rack-id="r1" />
     <rect
        y="5.6179028"
        x="32.47438"
@@ -67,7 +67,7 @@
        width="10.583333"
        id="rect30-9"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r2" />
+       data-rack-id="r2" />
     <rect
        y="5.6179018"
        x="48.349384"
@@ -75,7 +75,7 @@
        width="10.583333"
        id="rect30-2"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r5" />
+       data-rack-id="r5" />
     <rect
        y="5.6179018"
        x="58.932716"
@@ -83,7 +83,7 @@
        width="10.583333"
        id="rect30-8"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r6" />
+       data-rack-id="r6" />
     <rect
        y="5.6179018"
        x="74.807716"
@@ -91,7 +91,7 @@
        width="10.583333"
        id="rect30-3"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r9" />
+       data-rack-id="r9" />
     <rect
        y="5.6179018"
        x="95.97438"
@@ -99,7 +99,7 @@
        width="10.583333"
        id="rect30-91"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r10" />
+       data-rack-id="r10" />
     <rect
        y="5.6179023"
        x="111.84937"
@@ -107,7 +107,7 @@
        width="10.583333"
        id="rect30-4"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r13" />
+       data-rack-id="r13" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187088"
        id="rect30-9-3"
@@ -115,7 +115,7 @@
        height="2.6458344"
        x="133.01605"
        y="5.6179018"
-       data-label="r14" />
+       data-rack-id="r14" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187088"
        id="rect30-2-3"
@@ -123,7 +123,7 @@
        height="2.6458344"
        x="148.89105"
        y="5.6179018"
-       data-label="r17" />
+       data-rack-id="r17" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187088"
        id="rect30-8-8"
@@ -131,7 +131,7 @@
        height="2.6458344"
        x="159.47438"
        y="5.6179018"
-       data-label="r18" />
+       data-rack-id="r18" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187088"
        id="rect30-3-2"
@@ -139,7 +139,7 @@
        height="2.6458344"
        x="175.34938"
        y="5.6179018"
-       data-label="r21" />
+       data-rack-id="r21" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187088"
        id="rect30-9-4"
@@ -147,7 +147,7 @@
        height="2.6458344"
        x="185.93272"
        y="5.6179018"
-       data-label="r22" />
+       data-rack-id="r22" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187088"
        id="rect30-2-2"
@@ -155,7 +155,7 @@
        height="2.6458344"
        x="201.80772"
        y="5.6179018"
-       data-label="r25" />
+       data-rack-id="r25" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187088"
        id="rect30-8-2"
@@ -163,7 +163,7 @@
        height="2.6458344"
        x="212.39105"
        y="5.6179018"
-       data-label="r26" />
+       data-rack-id="r26" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187088"
        id="rect30-3-7"
@@ -171,7 +171,7 @@
        height="2.6458344"
        x="228.26605"
        y="5.6179018"
-       data-label="r29" />
+       data-rack-id="r29" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187088"
        id="rect30-91-5"
@@ -179,7 +179,7 @@
        height="2.6458344"
        x="254.7244"
        y="5.6179008"
-       data-label="r31" />
+       data-rack-id="r31" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187088"
        id="rect30-4-4"
@@ -187,7 +187,7 @@
        height="2.6458344"
        x="270.59937"
        y="5.6179018"
-       data-label="r34" />
+       data-rack-id="r34" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187088"
        id="rect162"
@@ -195,7 +195,7 @@
        height="2.6458344"
        x="238.84938"
        y="5.6179018"
-       data-label="r30_1" />
+       data-rack-id="r30_1" />
     <rect
        y="5.6179023"
        x="249.43272"
@@ -203,7 +203,7 @@
        width="5.2916775"
        id="rect162-0"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r30_2" />
+       data-rack-id="r30_2" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -212,7 +212,7 @@
        height="2.6458433"
        x="13.555403"
        y="-283.82855"
-       data-label="r35" />
+       data-rack-id="r35" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -221,7 +221,7 @@
        height="2.6458433"
        x="24.138733"
        y="-283.82855"
-       data-label="r36" />
+       data-rack-id="r36" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -230,7 +230,7 @@
        height="2.6458433"
        x="34.722073"
        y="-283.82855"
-       data-label="r37" />
+       data-rack-id="r37" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
@@ -239,7 +239,7 @@
        height="2.645823"
        x="66.472069"
        y="-286.47437"
-       data-label="r40" />
+       data-rack-id="r40" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
@@ -248,7 +248,7 @@
        height="2.645823"
        x="55.888741"
        y="-286.47437"
-       data-label="r39" />
+       data-rack-id="r39" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
@@ -257,7 +257,7 @@
        height="2.645823"
        x="45.305405"
        y="-286.47437"
-       data-label="r38" />
+       data-rack-id="r38" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -266,7 +266,7 @@
        height="2.6458433"
        x="87.638733"
        y="-283.82855"
-       data-label="r42" />
+       data-rack-id="r42" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -275,7 +275,7 @@
        height="2.6458433"
        x="77.055405"
        y="-283.82855"
-       data-label="r41" />
+       data-rack-id="r41" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
@@ -284,7 +284,7 @@
        height="2.6458333"
        x="119.38873"
        y="-286.4744"
-       data-label="r45" />
+       data-rack-id="r45" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
@@ -293,7 +293,7 @@
        height="2.6458333"
        x="108.80541"
        y="-286.4744"
-       data-label="r44" />
+       data-rack-id="r44" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
@@ -302,7 +302,7 @@
        height="2.6458333"
        x="98.222061"
        y="-286.4744"
-       data-label="r43" />
+       data-rack-id="r43" />
     <rect
        y="-283.82855"
        x="151.13873"
@@ -311,7 +311,7 @@
        id="rect30-4-4-8-61-0"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r48" />
+       data-rack-id="r48" />
     <rect
        y="-283.82855"
        x="140.5554"
@@ -320,7 +320,7 @@
        id="rect30-4-4-8-96-5"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r47" />
+       data-rack-id="r47" />
     <rect
        y="-286.4744"
        x="182.88873"
@@ -329,7 +329,7 @@
        id="rect30-4-4-8-0-6"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
        transform="rotate(90)"
-       data-label="r51" />
+       data-rack-id="r51" />
     <rect
        y="-286.4744"
        x="172.3054"
@@ -338,7 +338,7 @@
        id="rect30-4-4-8-49-9"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
        transform="rotate(90)"
-       data-label="r50" />
+       data-rack-id="r50" />
     <rect
        y="-286.4744"
        x="161.72206"
@@ -347,7 +347,7 @@
        id="rect30-4-4-8-09-4"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
        transform="rotate(90)"
-       data-label="r49" />
+       data-rack-id="r49" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -356,7 +356,7 @@
        height="2.6458433"
        x="204.0554"
        y="-283.82855"
-       data-label="r53" />
+       data-rack-id="r53" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -365,7 +365,7 @@
        height="2.6458433"
        x="193.47208"
        y="-283.82855"
-       data-label="r52" />
+       data-rack-id="r52" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
@@ -374,7 +374,7 @@
        height="2.645823"
        x="235.8054"
        y="-286.47437"
-       data-label="r56" />
+       data-rack-id="r56" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
@@ -383,7 +383,7 @@
        height="2.645823"
        x="225.22208"
        y="-286.47437"
-       data-label="r55" />
+       data-rack-id="r55" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
@@ -392,7 +392,7 @@
        height="2.645823"
        x="214.63873"
        y="-286.47437"
-       data-label="r54" />
+       data-rack-id="r54" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.18709"
@@ -401,7 +401,7 @@
        height="2.6458738"
        x="246.38873"
        y="-283.82858"
-       data-label="r57" />
+       data-rack-id="r57" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -410,7 +410,7 @@
        height="2.6458535"
        x="278.13873"
        y="-286.4744"
-       data-label="r60" />
+       data-rack-id="r60" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -419,7 +419,7 @@
        height="2.6458535"
        x="267.55539"
        y="-286.4744"
-       data-label="r59" />
+       data-rack-id="r59" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -428,7 +428,7 @@
        height="2.6458535"
        x="256.97202"
        y="-283.82858"
-       data-label="r58" />
+       data-rack-id="r58" />
     <rect
        y="315.18039"
        x="273.24518"
@@ -436,7 +436,7 @@
        width="10.583333"
        id="rect30-4-4-6"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
-       data-label="r63" />
+       data-rack-id="r63" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        id="rect30-4-4-6-2"
@@ -444,7 +444,7 @@
        height="2.6458485"
        x="220.32855"
        y="315.18042"
-       data-label="r68" />
+       data-rack-id="r68" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        id="rect30-4-4-6-0"
@@ -452,7 +452,7 @@
        height="2.6458485"
        x="230.91188"
        y="315.18039"
-       data-label="r67" />
+       data-rack-id="r67" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        id="rect30-4-4-6-6"
@@ -460,7 +460,7 @@
        height="2.6458485"
        x="241.49521"
        y="315.18039"
-       data-label="r66" />
+       data-rack-id="r66" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        id="rect30-4-4-6-62"
@@ -468,7 +468,7 @@
        height="2.6458485"
        x="252.07855"
        y="315.18039"
-       data-label="r65" />
+       data-rack-id="r65" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        id="rect30-4-4-6-69"
@@ -476,7 +476,7 @@
        height="2.6458485"
        x="262.66183"
        y="315.18039"
-       data-label="r64" />
+       data-rack-id="r64" />
     <rect
        y="315.18042"
        x="199.16188"
@@ -484,7 +484,7 @@
        width="10.583333"
        id="rect30-4-4-6-2-9"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
-       data-label="r70" />
+       data-rack-id="r70" />
     <rect
        y="315.18039"
        x="209.74521"
@@ -492,7 +492,7 @@
        width="10.583333"
        id="rect30-4-4-6-0-3"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
-       data-label="r69" />
+       data-rack-id="r69" />
     <rect
        y="-270.59937"
        x="92.930389"
@@ -501,7 +501,7 @@
        id="rect30-4-4-8-61-09"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r97" />
+       data-rack-id="r97" />
     <rect
        y="-270.59937"
        x="82.347061"
@@ -510,7 +510,7 @@
        id="rect30-4-4-8-96-4"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r98" />
+       data-rack-id="r98" />
     <rect
        y="-270.59937"
        x="114.09705"
@@ -520,7 +520,7 @@
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
        udk="811ang"
-       data-label="r95" />
+       data-rack-id="r95" />
     <rect
        y="-270.59937"
        x="103.51373"
@@ -529,7 +529,7 @@
        id="rect30-4-4-8-96-2"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r96" />
+       data-rack-id="r96" />
     <rect
        y="-267.95355"
        x="92.930389"
@@ -538,7 +538,7 @@
        id="rect30-4-4-8-61-3"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r102" />
+       data-rack-id="r102" />
     <rect
        y="-267.95355"
        x="82.347061"
@@ -547,7 +547,7 @@
        id="rect30-4-4-8-96-6"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r101" />
+       data-rack-id="r101" />
     <rect
        y="-267.95355"
        x="114.09705"
@@ -556,7 +556,7 @@
        id="rect30-4-4-8-61-7"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r104" />
+       data-rack-id="r104" />
     <rect
        y="-267.95355"
        x="103.51373"
@@ -565,7 +565,7 @@
        id="rect30-4-4-8-96-1"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r103" />
+       data-rack-id="r103" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -574,7 +574,7 @@
        height="2.6458433"
        x="148.4929"
        y="-270.5994"
-       data-label="r89" />
+       data-rack-id="r89" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -583,7 +583,7 @@
        height="2.6458433"
        x="137.90958"
        y="-270.5994"
-       data-label="r90" />
+       data-rack-id="r90" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -592,7 +592,7 @@
        height="2.6458433"
        x="169.65958"
        y="-270.5994"
-       data-label="r87" />
+       data-rack-id="r87" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -601,7 +601,7 @@
        height="2.6458433"
        x="159.07625"
        y="-270.5994"
-       data-label="r88" />
+       data-rack-id="r88" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -610,7 +610,7 @@
        height="2.6458433"
        x="148.4929"
        y="-267.95358"
-       data-label="r92" />
+       data-rack-id="r92" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -619,7 +619,7 @@
        height="2.6458433"
        x="137.90958"
        y="-267.95358"
-       data-label="r91" />
+       data-rack-id="r91" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -628,7 +628,7 @@
        height="2.6458433"
        x="169.65958"
        y="-267.95358"
-       data-label="r94" />
+       data-rack-id="r94" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -637,7 +637,7 @@
        height="2.6458433"
        x="159.07625"
        y="-267.95358"
-       data-label="r93" />
+       data-rack-id="r93" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -646,7 +646,7 @@
        height="2.6458433"
        x="204.0554"
        y="-270.5994"
-       data-label="r81" />
+       data-rack-id="r81" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -655,7 +655,7 @@
        height="2.6458433"
        x="193.47208"
        y="-270.5994"
-       data-label="r82" />
+       data-rack-id="r82" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -664,7 +664,7 @@
        height="2.6458433"
        x="225.22206"
        y="-270.5994"
-       data-label="r79" />
+       data-rack-id="r79" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -673,7 +673,7 @@
        height="2.6458433"
        x="214.63873"
        y="-270.5994"
-       data-label="r80" />
+       data-rack-id="r80" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -682,7 +682,7 @@
        height="2.6458433"
        x="204.0554"
        y="-267.95358"
-       data-label="r84" />
+       data-rack-id="r84" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -691,7 +691,7 @@
        height="2.6458433"
        x="193.47208"
        y="-267.95358"
-       data-label="r83" />
+       data-rack-id="r83" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -700,7 +700,7 @@
        height="2.6458433"
        x="225.22206"
        y="-267.95358"
-       data-label="r86" />
+       data-rack-id="r86" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -709,7 +709,7 @@
        height="2.6458433"
        x="214.63873"
        y="-267.95358"
-       data-label="r85" />
+       data-rack-id="r85" />
     <rect
        y="-286.47437"
        x="299.30539"
@@ -718,7 +718,7 @@
        id="rect30-4-4-8-0-6-1-9"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r62" />
+       data-rack-id="r62" />
     <rect
        y="-286.47437"
        x="288.72205"
@@ -727,7 +727,7 @@
        id="rect30-4-4-8-49-9-9-2"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r61" />
+       data-rack-id="r61" />
     <rect
        y="-270.5994"
        x="262.26373"
@@ -736,7 +736,7 @@
        id="rect30-4-4-8-61-09-9-6"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r73" />
+       data-rack-id="r73" />
     <rect
        y="-270.5994"
        x="251.6804"
@@ -745,7 +745,7 @@
        id="rect30-4-4-8-96-4-9-3"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r74" />
+       data-rack-id="r74" />
     <rect
        y="-270.5994"
        x="283.43039"
@@ -754,7 +754,7 @@
        id="rect30-4-4-8-61-2-5-0"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r71" />
+       data-rack-id="r71" />
     <rect
        y="-270.5994"
        x="272.84705"
@@ -763,7 +763,7 @@
        id="rect30-4-4-8-96-2-8-3"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r72" />
+       data-rack-id="r72" />
     <rect
        y="-267.95358"
        x="262.26373"
@@ -772,7 +772,7 @@
        id="rect30-4-4-8-61-3-4-7"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r76" />
+       data-rack-id="r76" />
     <rect
        y="-267.95358"
        x="251.6804"
@@ -781,7 +781,7 @@
        id="rect30-4-4-8-96-6-6-8"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r75" />
+       data-rack-id="r75" />
     <rect
        y="-267.95358"
        x="283.43039"
@@ -790,7 +790,7 @@
        id="rect30-4-4-8-61-7-1-5"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r78" />
+       data-rack-id="r78" />
     <rect
        y="-267.95358"
        x="272.84705"
@@ -799,7 +799,7 @@
        id="rect30-4-4-8-96-1-1-3"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r77" />
+       data-rack-id="r77" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -808,7 +808,7 @@
        height="2.6458433"
        x="90.284561"
        y="-254.7244"
-       data-label="r105" />
+       data-rack-id="r105" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -817,7 +817,7 @@
        height="2.6458433"
        x="111.45124"
        y="-254.7244"
-       data-label="r107" />
+       data-rack-id="r107" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -826,7 +826,7 @@
        height="2.6458433"
        x="100.86789"
        y="-254.7244"
-       data-label="r106" />
+       data-rack-id="r106" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -835,7 +835,7 @@
        height="2.6458433"
        x="132.6179"
        y="-254.7244"
-       data-label="r109" />
+       data-rack-id="r109" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -844,7 +844,7 @@
        height="2.6458433"
        x="122.03458"
        y="-254.7244"
-       data-label="r108" />
+       data-rack-id="r108" />
     <rect
        y="-254.7244"
        x="143.20123"
@@ -853,7 +853,7 @@
        id="rect30-4-4-8-96-6-5-4"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r110" />
+       data-rack-id="r110" />
     <rect
        y="-254.7244"
        x="153.78456"
@@ -862,7 +862,7 @@
        id="rect30-4-4-8-96-6-5-2"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r111" />
+       data-rack-id="r111" />
     <rect
        y="-254.7244"
        x="174.95125"
@@ -871,7 +871,7 @@
        id="rect30-4-4-8-61-3-9-7"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r113" />
+       data-rack-id="r113" />
     <rect
        y="-254.7244"
        x="164.3679"
@@ -880,7 +880,7 @@
        id="rect30-4-4-8-96-6-2-9"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r112" />
+       data-rack-id="r112" />
     <rect
        y="-254.7244"
        x="196.1179"
@@ -889,7 +889,7 @@
        id="rect30-4-4-8-61-7-0-3"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r115" />
+       data-rack-id="r115" />
     <rect
        y="-254.7244"
        x="185.53458"
@@ -898,7 +898,7 @@
        id="rect30-4-4-8-96-1-2-4"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r114" />
+       data-rack-id="r114" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -907,7 +907,7 @@
        height="2.6458433"
        x="206.70123"
        y="-254.7244"
-       data-label="r116" />
+       data-rack-id="r116" />
     <rect
        y="-241.49524"
        x="90.284561"
@@ -916,7 +916,7 @@
        id="rect30-4-4-8-96-6-5-9"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r129" />
+       data-rack-id="r129" />
     <rect
        y="-241.49524"
        x="111.45126"
@@ -925,7 +925,7 @@
        id="rect30-4-4-8-61-3-9-8"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r127" />
+       data-rack-id="r127" />
     <rect
        y="-241.49524"
        x="100.8679"
@@ -934,7 +934,7 @@
        id="rect30-4-4-8-96-6-2-1"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r128" />
+       data-rack-id="r128" />
     <rect
        y="-241.49524"
        x="132.61792"
@@ -943,7 +943,7 @@
        id="rect30-4-4-8-61-7-0-5"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r125" />
+       data-rack-id="r125" />
     <rect
        y="-241.49524"
        x="122.03455"
@@ -952,7 +952,7 @@
        id="rect30-4-4-8-96-1-2-0"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r126" />
+       data-rack-id="r126" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -961,7 +961,7 @@
        height="2.6458433"
        x="143.20125"
        y="-241.49524"
-       data-label="r124" />
+       data-rack-id="r124" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -970,7 +970,7 @@
        height="2.6458433"
        x="153.78458"
        y="-241.49524"
-       data-label="r123" />
+       data-rack-id="r123" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -979,7 +979,7 @@
        height="2.6458433"
        x="174.95126"
        y="-241.49524"
-       data-label="r121" />
+       data-rack-id="r121" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -988,7 +988,7 @@
        height="2.6458433"
        x="164.36792"
        y="-241.49524"
-       data-label="r122" />
+       data-rack-id="r122" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -997,7 +997,7 @@
        height="2.6458433"
        x="196.11794"
        y="-241.49524"
-       data-label="r119" />
+       data-rack-id="r119" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1006,7 +1006,7 @@
        height="2.6458433"
        x="185.53459"
        y="-241.49524"
-       data-label="r120" />
+       data-rack-id="r120" />
     <rect
        y="-241.49524"
        x="206.70125"
@@ -1015,7 +1015,7 @@
        id="rect30-4-4-8-96-6-5-4-1-9"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r118" />
+       data-rack-id="r118" />
     <rect
        y="-217.28458"
        x="-252.07855"
@@ -1024,7 +1024,7 @@
        id="rect30-4-4-8-96-6-5-7"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="scale(-1)"
-       data-label="r117" />
+       data-rack-id="r117" />
     <rect
        style="fill:#666666;stroke:none;stroke-width:0.264583"
        id="rect775"
@@ -1040,7 +1040,7 @@
        id="rect30-4-4-8-61-09-9-9"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r131" />
+       data-rack-id="r131" />
     <rect
        y="-249.43274"
        x="230.51373"
@@ -1049,7 +1049,7 @@
        id="rect30-4-4-8-96-4-9-0"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r130" />
+       data-rack-id="r130" />
     <rect
        y="-246.78693"
        x="241.09708"
@@ -1058,7 +1058,7 @@
        id="rect30-4-4-8-61-3-4-8"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r138" />
+       data-rack-id="r138" />
     <rect
        y="-246.78693"
        x="230.51373"
@@ -1067,7 +1067,7 @@
        id="rect30-4-4-8-96-6-6-81"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r139" />
+       data-rack-id="r139" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1076,7 +1076,7 @@
        height="2.6458433"
        x="262.2637"
        y="-249.43277"
-       data-label="r132" />
+       data-rack-id="r132" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1085,7 +1085,7 @@
        height="2.6458433"
        x="283.43036"
        y="-249.43277"
-       data-label="r134" />
+       data-rack-id="r134" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1094,7 +1094,7 @@
        height="2.6458433"
        x="272.84702"
        y="-249.43277"
-       data-label="r133" />
+       data-rack-id="r133" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1103,7 +1103,7 @@
        height="2.6458433"
        x="262.2637"
        y="-246.78696"
-       data-label="r137" />
+       data-rack-id="r137" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1112,7 +1112,7 @@
        height="2.6458433"
        x="283.43036"
        y="-246.78696"
-       data-label="r135" />
+       data-rack-id="r135" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1121,7 +1121,7 @@
        height="2.6458433"
        x="272.84702"
        y="-246.78696"
-       data-label="r136" />
+       data-rack-id="r136" />
     <rect
        style="fill:#666666;stroke:none;stroke-width:0.23665"
        id="rect849"
@@ -1137,7 +1137,7 @@
        height="2.6458433"
        x="92.930382"
        y="-228.26602"
-       data-label="r164" />
+       data-rack-id="r164" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1146,7 +1146,7 @@
        height="2.6458433"
        x="82.347054"
        y="-228.26602"
-       data-label="r165" />
+       data-rack-id="r165" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1155,7 +1155,7 @@
        height="2.6458433"
        x="114.09705"
        y="-228.26602"
-       data-label="r162" />
+       data-rack-id="r162" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1164,7 +1164,7 @@
        height="2.6458433"
        x="103.51371"
        y="-228.26602"
-       data-label="r163" />
+       data-rack-id="r163" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1173,7 +1173,7 @@
        height="2.6458433"
        x="92.930382"
        y="-225.62021"
-       data-label="r167" />
+       data-rack-id="r167" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1182,7 +1182,7 @@
        height="2.6458433"
        x="82.347054"
        y="-225.62021"
-       data-label="r166" />
+       data-rack-id="r166" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1191,7 +1191,7 @@
        height="2.6458433"
        x="114.09705"
        y="-225.62021"
-       data-label="r169" />
+       data-rack-id="r169" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1200,7 +1200,7 @@
        height="2.6458433"
        x="103.51371"
        y="-225.62021"
-       data-label="r168" />
+       data-rack-id="r168" />
     <rect
        y="-228.26605"
        x="148.4929"
@@ -1209,7 +1209,7 @@
        id="rect30-4-4-8-61-09-5-5"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r156" />
+       data-rack-id="r156" />
     <rect
        y="-228.26605"
        x="137.90958"
@@ -1218,7 +1218,7 @@
        id="rect30-4-4-8-96-4-6-8"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r157" />
+       data-rack-id="r157" />
     <rect
        y="-228.26605"
        x="169.65958"
@@ -1227,7 +1227,7 @@
        id="rect30-4-4-8-61-2-3-7"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r154" />
+       data-rack-id="r154" />
     <rect
        y="-228.26605"
        x="159.07625"
@@ -1236,7 +1236,7 @@
        id="rect30-4-4-8-96-2-1-0"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r155" />
+       data-rack-id="r155" />
     <rect
        y="-225.62024"
        x="148.4929"
@@ -1245,7 +1245,7 @@
        id="rect30-4-4-8-61-3-3-8"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r159" />
+       data-rack-id="r159" />
     <rect
        y="-225.62024"
        x="137.90958"
@@ -1254,7 +1254,7 @@
        id="rect30-4-4-8-96-6-3-8"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r158" />
+       data-rack-id="r158" />
     <rect
        y="-225.62024"
        x="169.65958"
@@ -1263,7 +1263,7 @@
        id="rect30-4-4-8-61-7-7-3"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r161" />
+       data-rack-id="r161" />
     <rect
        y="-225.62024"
        x="159.07625"
@@ -1272,7 +1272,7 @@
        id="rect30-4-4-8-96-1-3-1"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r160" />
+       data-rack-id="r160" />
     <rect
        y="-228.26605"
        x="204.0554"
@@ -1281,7 +1281,7 @@
        id="rect30-4-4-8-61-09-9-94"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r148" />
+       data-rack-id="r148" />
     <rect
        y="-228.26605"
        x="193.47208"
@@ -1290,7 +1290,7 @@
        id="rect30-4-4-8-96-4-9-7"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r149" />
+       data-rack-id="r149" />
     <rect
        y="-228.26605"
        x="225.22206"
@@ -1299,7 +1299,7 @@
        id="rect30-4-4-8-61-2-5-5"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r146" />
+       data-rack-id="r146" />
     <rect
        y="-228.26605"
        x="214.63873"
@@ -1308,7 +1308,7 @@
        id="rect30-4-4-8-96-2-8-1"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r147" />
+       data-rack-id="r147" />
     <rect
        y="-225.62024"
        x="204.0554"
@@ -1317,7 +1317,7 @@
        id="rect30-4-4-8-61-3-4-88"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r151" />
+       data-rack-id="r151" />
     <rect
        y="-225.62024"
        x="193.47208"
@@ -1326,7 +1326,7 @@
        id="rect30-4-4-8-96-6-6-2"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r150" />
+       data-rack-id="r150" />
     <rect
        y="-225.62024"
        x="225.22206"
@@ -1335,7 +1335,7 @@
        id="rect30-4-4-8-61-7-1-8"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r153" />
+       data-rack-id="r153" />
     <rect
        y="-225.62024"
        x="214.63873"
@@ -1344,7 +1344,7 @@
        id="rect30-4-4-8-96-1-1-31"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r152" />
+       data-rack-id="r152" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1353,7 +1353,7 @@
        height="2.6458433"
        x="262.26373"
        y="-228.26605"
-       data-label="r140" />
+       data-rack-id="r140" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1362,7 +1362,7 @@
        height="2.6458433"
        x="283.43039"
        y="-228.26605"
-       data-label="r142" />
+       data-rack-id="r142" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1371,7 +1371,7 @@
        height="2.6458433"
        x="272.84705"
        y="-228.26605"
-       data-label="r141" />
+       data-rack-id="r141" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1380,7 +1380,7 @@
        height="2.6458433"
        x="262.26373"
        y="-225.62024"
-       data-label="r145" />
+       data-rack-id="r145" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1389,7 +1389,7 @@
        height="2.6458433"
        x="283.43039"
        y="-225.62024"
-       data-label="r143" />
+       data-rack-id="r143" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1398,7 +1398,7 @@
        height="2.6458433"
        x="272.84705"
        y="-225.62024"
-       data-label="r144" />
+       data-rack-id="r144" />
     <rect
        style="fill:#666666;stroke:none;stroke-width:0.264583"
        id="rect959"
@@ -1435,7 +1435,7 @@
        height="2.6458433"
        x="40.013737"
        y="-90.682724"
-       data-label="r191" />
+       data-rack-id="r191" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1444,7 +1444,7 @@
        height="2.6458433"
        x="50.597073"
        y="-90.682724"
-       data-label="r190" />
+       data-rack-id="r190" />
     <rect
        transform="scale(-1)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1453,7 +1453,7 @@
        height="2.6458433"
        x="-98.620216"
        y="-74.409576"
-       data-label="r187" />
+       data-rack-id="r187" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1462,7 +1462,7 @@
        height="2.6458433"
        x="61.180401"
        y="-90.682724"
-       data-label="r188" />
+       data-rack-id="r188" />
     <rect
        y="90.284554"
        x="143.5994"
@@ -1478,7 +1478,7 @@
        id="rect30-4-4-8-61-09-3-9"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="scale(-1)"
-       data-label="r183" />
+       data-rack-id="r183" />
     <rect
        y="-95.576233"
        x="-175.3494"
@@ -1487,7 +1487,7 @@
        id="rect30-4-4-8-96-4-0-7"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="scale(-1)"
-       data-label="r176" />
+       data-rack-id="r176" />
     <rect
        y="-98.222076"
        x="-164.76605"
@@ -1496,7 +1496,7 @@
        id="rect30-4-4-8-61-3-41-4"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="scale(-1)"
-       data-label="r182" />
+       data-rack-id="r182" />
     <rect
        y="-95.576233"
        x="-164.76605"
@@ -1505,7 +1505,7 @@
        id="rect30-4-4-8-96-6-4-5"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="scale(-1)"
-       data-label="r177" />
+       data-rack-id="r177" />
     <rect
        transform="scale(-1)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1514,7 +1514,7 @@
        height="2.6458433"
        x="-143.5994"
        y="-98.222054"
-       data-label="r181" />
+       data-rack-id="r181" />
     <rect
        transform="scale(-1)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1523,7 +1523,7 @@
        height="2.6458433"
        x="-143.5994"
        y="-95.576218"
-       data-label="r178" />
+       data-rack-id="r178" />
     <rect
        transform="scale(-1)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1532,7 +1532,7 @@
        height="2.6458433"
        x="-133.01605"
        y="-98.222054"
-       data-label="r180" />
+       data-rack-id="r180" />
     <rect
        transform="scale(-1)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1541,7 +1541,7 @@
        height="2.6458433"
        x="-133.01605"
        y="-95.576218"
-       data-label="r179" />
+       data-rack-id="r179" />
     <rect
        style="fill:#666666;stroke:none;stroke-width:0.23665"
        id="rect849-9-9"
@@ -1557,7 +1557,7 @@
        id="rect30-4-4-8-96-4-0-1"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r172" />
+       data-rack-id="r172" />
     <rect
        y="-199.1619"
        x="79.701225"
@@ -1566,7 +1566,7 @@
        id="rect30-4-4-8-96-6-4-2"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r173" />
+       data-rack-id="r173" />
     <rect
        y="-201.80771"
        x="100.86789"
@@ -1575,7 +1575,7 @@
        id="rect30-4-4-8-96-4-0-10"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r171" />
+       data-rack-id="r171" />
     <rect
        y="-199.1619"
        x="100.86789"
@@ -1584,7 +1584,7 @@
        id="rect30-4-4-8-96-6-4-3"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r174" />
+       data-rack-id="r174" />
     <rect
        y="-201.80772"
        x="111.45123"
@@ -1593,7 +1593,7 @@
        id="rect30-4-4-8-96-4-0-8"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r170" />
+       data-rack-id="r170" />
     <rect
        y="-199.16191"
        x="111.45123"
@@ -1602,7 +1602,7 @@
        id="rect30-4-4-8-96-6-4-1"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(90)"
-       data-label="r175" />
+       data-rack-id="r175" />
     <rect
        y="90.284561"
        x="88.03688"
@@ -1618,7 +1618,7 @@
        height="2.6458433"
        x="100.86792"
        y="-95.974365"
-       data-label="r192" />
+       data-rack-id="r192" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1627,7 +1627,7 @@
        height="2.6458433"
        x="100.86792"
        y="-93.328552"
-       data-label="r195" />
+       data-rack-id="r195" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1636,7 +1636,7 @@
        height="2.6458433"
        x="111.45124"
        y="-95.97438"
-       data-label="r193" />
+       data-rack-id="r193" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -1645,7 +1645,7 @@
        height="2.6458433"
        x="111.45124"
        y="-93.328568"
-       data-label="r194" />
+       data-rack-id="r194" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.187;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 125.07854,111.45124 -7.9375,7.9375 c 20.40009,13.55619 41.48846,14.65535 63.5,0 l -7.9375,-7.9375 c -18.02777,10.96654 -30.34761,10.19432 -47.625,0 z"
@@ -1709,7 +1709,7 @@
        id="r186"
        style="fill:none;stroke:#000000;stroke-width:0.187;stroke-miterlimit:4;stroke-dasharray:none"
        transform="rotate(90)"
-       data-label="r186" />
+       data-rack-id="r186" />
     <rect
        y="-98.620216"
        x="50.597073"
@@ -1718,7 +1718,7 @@
        id="r185"
        style="fill:none;stroke:#000000;stroke-width:0.187;stroke-miterlimit:4;stroke-dasharray:none"
        transform="rotate(90)"
-       data-label="r185" />
+       data-rack-id="r185" />
     <rect
        y="251.6804"
        x="193.87022"
@@ -2357,7 +2357,7 @@
        x="-18.847069"
        y="43.057716"
        transform="rotate(-90)"
-       data-label="r3" />
+       data-rack-id="r3" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187088"
        id="r4"
@@ -2366,7 +2366,7 @@
        x="-18.847069"
        y="45.703548"
        transform="rotate(-90)"
-       data-label="r4" />
+       data-rack-id="r4" />
     <rect
        transform="rotate(-90)"
        y="69.516045"
@@ -2375,7 +2375,7 @@
        width="10.583333"
        id="r7"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r7" />
+       data-rack-id="r7" />
     <rect
        transform="rotate(-90)"
        y="72.16188"
@@ -2384,7 +2384,7 @@
        width="10.583333"
        id="r8"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r8" />
+       data-rack-id="r8" />
     <rect
        transform="rotate(-90)"
        y="106.55772"
@@ -2393,7 +2393,7 @@
        width="10.583333"
        id="r11"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r11" />
+       data-rack-id="r11" />
     <rect
        transform="rotate(-90)"
        y="109.20356"
@@ -2402,7 +2402,7 @@
        width="10.583333"
        id="r12"
        style="fill:none;stroke:#000000;stroke-width:0.187;stroke-miterlimit:4;stroke-dasharray:none"
-       data-label="r12" />
+       data-rack-id="r12" />
     <rect
        transform="rotate(-90)"
        y="143.59938"
@@ -2411,7 +2411,7 @@
        width="10.583333"
        id="r15"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r15" />
+       data-rack-id="r15" />
     <rect
        transform="rotate(-90)"
        y="146.24522"
@@ -2420,7 +2420,7 @@
        width="10.583333"
        id="r16"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r16" />
+       data-rack-id="r16" />
     <rect
        transform="rotate(-90)"
        y="170.05772"
@@ -2429,7 +2429,7 @@
        width="10.583333"
        id="r19"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r19" />
+       data-rack-id="r19" />
     <rect
        transform="rotate(-90)"
        y="172.70355"
@@ -2438,7 +2438,7 @@
        width="10.583333"
        id="r20"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r20" />
+       data-rack-id="r20" />
     <rect
        transform="rotate(-90)"
        y="196.51607"
@@ -2447,7 +2447,7 @@
        width="10.583333"
        id="r23"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r23" />
+       data-rack-id="r23" />
     <rect
        transform="rotate(-90)"
        y="199.1619"
@@ -2456,7 +2456,7 @@
        width="10.583333"
        id="r24"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r24" />
+       data-rack-id="r24" />
     <rect
        transform="rotate(-90)"
        y="222.97438"
@@ -2465,7 +2465,7 @@
        width="10.583333"
        id="r27"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r27" />
+       data-rack-id="r27" />
     <rect
        transform="rotate(-90)"
        y="225.62022"
@@ -2474,7 +2474,7 @@
        width="10.583333"
        id="r28"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r28" />
+       data-rack-id="r28" />
     <rect
        transform="rotate(-90)"
        y="265.30771"
@@ -2483,7 +2483,7 @@
        width="10.583333"
        id="r32"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r32" />
+       data-rack-id="r32" />
     <rect
        transform="rotate(-90)"
        y="267.95352"
@@ -2492,7 +2492,7 @@
        width="10.583333"
        id="r33"
        style="fill:none;stroke:#000000;stroke-width:0.187088"
-       data-label="r33" />
+       data-rack-id="r33" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187;stroke-miterlimit:4;stroke-dasharray:none"
        id="it2_2"
@@ -2654,7 +2654,7 @@
        height="10.583333"
        x="90.682709"
        y="40.013737"
-       data-label="r184" />
+       data-rack-id="r184" />
     <rect
        style="fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.187;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect2994"
@@ -2732,7 +2732,7 @@
        width="10.583333"
        id="r196_1"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
-       data-label="r196_1" />
+       data-rack-id="r196_1" />
     <rect
        y="360.15958"
        x="13.953535"
@@ -2740,7 +2740,7 @@
        width="10.583333"
        id="r196_2"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
-       data-label="r196_2" />
+       data-rack-id="r196_2" />
     <rect
        y="8.6618557"
        x="-376.03458"
@@ -2749,7 +2749,7 @@
        id="rect30-4-4-6-0-6"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        transform="rotate(-90)"
-       data-label="r196_3" />
+       data-rack-id="r196_3" />
     <rect
        transform="rotate(-90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -2758,7 +2758,7 @@
        height="2.6458485"
        x="-386.61792"
        y="8.6618671"
-       data-label="r196_4" />
+       data-rack-id="r196_4" />
     <rect
        transform="rotate(-90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -2767,7 +2767,7 @@
        height="2.6458485"
        x="-397.20123"
        y="8.6618671"
-       data-label="r196_5" />
+       data-rack-id="r196_5" />
     <rect
        transform="rotate(-90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -2776,7 +2776,7 @@
        height="2.6458485"
        x="-407.78458"
        y="8.6618671"
-       data-label="r196_6" />
+       data-rack-id="r196_6" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        id="r196_8"
@@ -2784,7 +2784,7 @@
        height="2.6458485"
        x="27.182705"
        y="405.13873"
-       data-label="r196_8" />
+       data-rack-id="r196_8" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        id="r196_7"
@@ -2792,7 +2792,7 @@
        height="2.6458485"
        x="16.599367"
        y="405.13873"
-       data-label="r196_7" />
+       data-rack-id="r196_7" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.187089"
        id="r196_9"
@@ -2800,7 +2800,7 @@
        height="2.6458485"
        x="37.766033"
        y="405.13873"
-       data-label="r196_9" />
+       data-rack-id="r196_9" />
     <rect
        y="407.78458"
        x="3.370203"
@@ -2877,7 +2877,7 @@
        height="2.6458433"
        x="129.97208"
        y="-286.47437"
-       data-label="r46" />
+       data-rack-id="r46" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -2886,7 +2886,7 @@
        height="2.6458433"
        x="71.763733"
        y="-270.59937"
-       data-label="r99" />
+       data-rack-id="r99" />
     <rect
        transform="rotate(90)"
        style="fill:none;stroke:#000000;stroke-width:0.187089"
@@ -2895,6 +2895,6 @@
        height="2.6458433"
        x="71.763733"
        y="-267.95355"
-       data-label="r100" />
+       data-rack-id="r100" />
   </g>
 </svg>

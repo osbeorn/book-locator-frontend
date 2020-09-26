@@ -15,12 +15,17 @@ import {Rack} from '../../models/rack.model';
 })
 export class SearchComponent implements OnInit {
 
+  private RACK_SELECTED_FILL_COLOR = '#4E73DF';
+
   public query: string;
   public zoomedIn: boolean = false;
 
   public library: Library = {};
   public floor: Floor = {};
   public racks: Rack[] = [];
+
+  public U: string;
+
   public udkName: string;
 
   public floorPlanUrl: string;
@@ -46,6 +51,7 @@ export class SearchComponent implements OnInit {
             this.library = res.library;
             this.floor = res.floor;
             this.racks = res.racks;
+            this.U = res.U;
             this.udkName = res.udkName;
 
             this.floorPlanUrl = this.floorService.getFloorPlanUrl(res.floor.id);
@@ -93,7 +99,7 @@ export class SearchComponent implements OnInit {
         if (element) {
           element
             .attr({
-              fill: '#930042'
+              fill: this.RACK_SELECTED_FILL_COLOR
             })
             .append(title);
         }
