@@ -20,10 +20,26 @@ export class AuthService {
     const authenticatedUser = this.users
       .find(u => u.username === user.username && u.password === user.password);
 
-    return this.authenticated = !!authenticatedUser;
+    if (authenticatedUser) {
+      this.authenticated = true;
+      sessionStorage.setItem('authenticated', 'true');
+    }
+
+    return this.authenticated;
+  }
+
+  logout(): void {
+    sessionStorage.removeItem('authenticated');
+    this.authenticated = false;
   }
 
   isAuthenticated(): boolean {
+    if (this.authenticated) {
+      return true;
+    }
+
+    this.authenticated = (sessionStorage.getItem('authenticated') === 'true');
+
     return this.authenticated;
   }
 }
