@@ -15,7 +15,7 @@ import {Rack} from '../../models/rack.model';
 })
 export class SearchComponent implements OnInit {
 
-  private RACK_SELECTED_FILL_COLOR = '#4E73DF';
+  private RACK_SELECTED_FILL_COLOR = '#930042';
 
   public query: string;
   public zoomedIn: boolean = false;
@@ -87,22 +87,24 @@ export class SearchComponent implements OnInit {
   }
 
   private highlightLocation(): void {
-    this.racks
-      .forEach(r => {
-        const element = this.snap.select(`[${this.floor.rackCodeIdentifier}="${r.code}"]`);
+    if (this.racks) {
+      this.racks
+        .forEach(r => {
+          const element = this.snap.select(`[${this.floor.rackCodeIdentifier}="${r.code}"]`);
 
-        const title = this.snap.el('title', {});
-        if (this.udkName) {
-          title.node.innerHTML = this.udkName;
-        }
+          const title = this.snap.el('title', {});
+          if (this.udkName) {
+            title.node.innerHTML = this.udkName;
+          }
 
-        if (element) {
-          element
-            .attr({
-              fill: this.RACK_SELECTED_FILL_COLOR
-            })
-            .append(title);
-        }
-      });
+          if (element) {
+            element
+              .attr({
+                fill: this.RACK_SELECTED_FILL_COLOR
+              })
+              .append(title);
+          }
+        });
+    }
   }
 }

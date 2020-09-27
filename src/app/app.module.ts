@@ -30,6 +30,8 @@ import {SearchService} from './services/search.service';
 import {LoginComponent} from './content/login/login.component';
 import {AuthService} from './services/auth.service';
 import {AuthGuard} from './content/guards/auth.guard';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {GravatarModule} from 'ngx-gravatar';
 
 declare global {
   const Snap: typeof snap;
@@ -59,6 +61,8 @@ declare global {
 
     BsDropdownModule.forRoot(),
     ButtonsModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    BrowserAnimationsModule,
     TableModule,
     InlineSVGModule.forRoot({
       baseUrl: ''
@@ -66,7 +70,8 @@ declare global {
     LaddaModule.forRoot({
       style: 'zoom-out',
       spinnerLines: 12
-    })
+    }),
+    GravatarModule
   ],
   providers: [
     AuthGuard,
