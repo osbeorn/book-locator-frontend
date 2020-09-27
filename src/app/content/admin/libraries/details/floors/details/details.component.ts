@@ -30,6 +30,7 @@ export class DetailsComponent implements OnInit {
 
   library: Library = {};
 
+  floorRackCodeIdentifier: string;
   floorRackCodeIdentifierSubject: ReplaySubject<string> = new ReplaySubject<string>(1);
 
   selectedRack: SelectedRack;
@@ -54,6 +55,7 @@ export class DetailsComponent implements OnInit {
         this.floorService.getFloor(this.id)
           .subscribe(res => {
             this.floor = res;
+            this.floorRackCodeIdentifier = this.floor.rackCodeIdentifier;
             this.floorRackCodeIdentifierSubject.next(this.floor.rackCodeIdentifier);
 
             this.libraryService.getLibrary(this.floor.libraryId)
@@ -104,27 +106,31 @@ export class DetailsComponent implements OnInit {
           );
 
           el.click(() => {
-            el.paper
-              .selectAll('.rack-selected')
-              .forEach(el2 => {
-
-                el2
-                  .removeClass('rack-selected')
-                  .attr({
-                    fill: this.RACK_DEFAULT_FILL_COLOR
-                  });
-              });
-
-            el
-              .addClass('rack-selected')
-              .attr({
-                fill: this.RACK_SELECTED_FILL_COLOR
-              });
-
-            this.rackSelected(el);
+            this.elementSelected(el);
           });
         });
     });
+  }
+
+  elementSelected(element: Snap.Element): void {
+    element.paper
+      .selectAll('.rack-selected')
+      .forEach(el2 => {
+
+        el2
+          .removeClass('rack-selected')
+          .attr({
+            fill: this.RACK_DEFAULT_FILL_COLOR
+          });
+      });
+
+    element
+      .addClass('rack-selected')
+      .attr({
+        fill: this.RACK_SELECTED_FILL_COLOR
+      });
+
+    this.rackSelected(element);
   }
 
   rackSelected(el: Snap.Element): void {

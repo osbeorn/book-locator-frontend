@@ -31,7 +31,11 @@
             </div>
 
             <div class="col-12 form-group">
-              <label for="rack-code-identifier">Atribut oznake regalov</label>
+              <label for="rack-code-identifier">Atribut oznake regalov&nbsp;</label>
+              <i class="fa fa-info-circle"
+                 popover="Atribut, ki določa kateri element v tlorisu je regal, npr. 'id', 'rack-label', 'data-rack-id', ..."
+                 [outsideClick]="true">
+              </i>
               <input type="text" id="rack-code-identifier" required
                      [(ngModel)]="floor.rackCodeIdentifier" #rackCodeAttribute="ngModel" name="rack-code-identifier" class="form-control">
               <div [hidden]="rackCodeAttribute.valid || rackCodeAttribute.pristine" class="invalid-feedback">

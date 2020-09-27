@@ -49,3 +49,23 @@ html, body {
 .p-datatable .p-datatable-thead > tr > th {
   border: none;
 }
+
+.p-paginator .p-paginator-first,
+.p-paginator .p-paginator-prev,
+.p-paginator .p-paginator-next,
+.p-paginator .p-paginator-last {
+  color: var(--primary-color);
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.p-datatable .p-sortable-column.p-highlight {
+  color: var(--primary-color);
+
+  & .p-sortable-column-icon {
+    color: var(--primary-color);
+  }
+}
