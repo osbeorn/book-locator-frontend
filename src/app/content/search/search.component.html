@@ -6,12 +6,12 @@
 
     <div class="row">
       <div class="col-lg-9 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
-        <em>Lokacija</em>: <strong>{{library.name}} - {{floor.name}}</strong>
+        <em>Lokacija</em>: <strong>{{library?.name}} - {{floor?.name}}</strong>
       </div>
     </div>
     <div class="row mb-4">
       <div class="col-lg-9 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
-        <em>UDK</em>: <strong>{{U}}</strong>
+        <em>UDK</em>: <strong>{{U}}{{udkName ? ' - ' + udkName : ''}}</strong>
       </div>
     </div>
 
