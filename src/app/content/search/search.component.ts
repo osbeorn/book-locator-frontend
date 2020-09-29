@@ -7,6 +7,7 @@ import {FloorService} from '../../services/floor.service';
 import {Library} from '../../models/library.model';
 import {Floor} from '../../models/floor.model';
 import {Rack} from '../../models/rack.model';
+import {finalize} from 'rxjs/operators';
 
 @Component({
   selector: 'app-search',
@@ -19,6 +20,7 @@ export class SearchComponent implements OnInit {
 
   public query: string;
   public zoomedIn: boolean = false;
+  public loading: boolean = true;
 
   public library: Library = {};
   public floor: Floor = {};
@@ -46,6 +48,9 @@ export class SearchComponent implements OnInit {
       this.query = qp.get('q');
 
       this.searchService.getSearchResponse(this.query)
+        .pipe(
+          finalize(() => this.loading = false)
+        )
         .subscribe(res => {
           if (res) {
             this.library = res.library;

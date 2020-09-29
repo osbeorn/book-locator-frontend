@@ -4,22 +4,29 @@
       Lokator gradiva
     </h3>
 
-    <div class="row">
-      <div class="col-lg-9 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
-        <em>Lokacija</em>: <strong>{{library?.name}} - {{floor?.name}}</strong>
-      </div>
-    </div>
-    <div class="row mb-4">
-      <div class="col-lg-9 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
-        <em>UDK</em>: <strong>{{U}}{{udkName ? ' - ' + udkName : ''}}</strong>
+    <div class="row mt-5" *ngIf="loading">
+      <div class="col-12">
+        <span class="d-block text-center">
+          <i class="fa fa-circle-notch fa-3x fa-spin"></i>
+        </span>
       </div>
     </div>
 
-    <div class="floor-plan-container" [ngClass]="{ 'zoom-out': !zoomedIn }"
-         [inlineSVG]="floorPlanUrl" (onSVGInserted)="processFloorPlan()">
-      <span class="d-block text-center">
-        <i class="fa fa-circle-notch fa-3x fa-spin"></i>
-      </span>
+    <div *ngIf="!loading">
+      <div class="row">
+        <div class="col-lg-9 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+          <em>Lokacija</em>: <strong>{{library?.name}} - {{floor?.name}}</strong>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-lg-9 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+          <em>UDK</em>: <strong>{{U}}{{udkName ? ' - ' + udkName : ''}}</strong>
+        </div>
+      </div>
+
+      <div class="floor-plan-container" [ngClass]="{ 'zoom-out': !zoomedIn }"
+           [inlineSVG]="floorPlanUrl" (onSVGInserted)="processFloorPlan()">
+      </div>
     </div>
   </div>
 </div>
