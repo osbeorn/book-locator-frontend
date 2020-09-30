@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <div *ngIf="!loading">
+    <div *ngIf="!loading && !error">
       <div class="row">
         <div class="col-lg-9 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
           <em>Lokacija</em>: <strong>{{library?.name}} - {{floor?.name}}</strong>
@@ -26,6 +26,14 @@
 
       <div class="floor-plan-container" [ngClass]="{ 'zoom-out': !zoomedIn }"
            [inlineSVG]="floorPlanUrl" (onSVGInserted)="processFloorPlan()">
+      </div>
+    </div>
+
+    <div class="row mt-5" *ngIf="errorMessage">
+      <div class="col-lg-6 offset-lg-3">
+        <div class="alert alert-info" role="alert">
+          {{errorMessage}}
+        </div>
       </div>
     </div>
   </div>

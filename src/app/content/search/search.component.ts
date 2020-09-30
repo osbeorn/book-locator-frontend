@@ -22,6 +22,9 @@ export class SearchComponent implements OnInit {
   public zoomedIn: boolean = false;
   public loading: boolean = true;
 
+  public error: boolean = false;
+  public errorMessage: string;
+
   public library: Library = {};
   public floor: Floor = {};
   public racks: Rack[] = [];
@@ -51,16 +54,33 @@ export class SearchComponent implements OnInit {
         .pipe(
           finalize(() => this.loading = false)
         )
-        .subscribe(res => {
-          if (res) {
-            this.library = res.library;
-            this.floor = res.floor;
-            this.racks = res.racks;
-            this.U = res.U;
-            this.udkName = res.udkName;
+        .subscribe(
+          res => {
+            if (res) {
+              this.library = res.library;
+              this.floor = res.floor;
+              this.racks = res.racks;
+              this.U = res.U;
+              this.udkName = res.udkName;
 
-            this.floorPlanUrl = this.floorService.getFloorPlanUrl(res.floor.id);
-          }
+              this.floorPlanUrl = this.floorService.getFloorPlanUrl(res.floor.id);
+            }
+          },
+        res => {
+            if (res.error) {
+              this.error = true;
+
+              switch (res.error.code) {
+                case 'invalid.search.parameter':
+                  this.errorMessage = `Pri iskanju je bil podan neveljaven parameter ${res.error.params.parameter}.`;
+                  break;
+                case 'missing.required.search.parameters':
+                  this.errorMessage = 'Pri iskanju niste podali obveznih parametrov L in/ali U.';
+                  break;
+                default:
+                  this.errorMessage = 'Pri iskanju je prišlo do nepričakovane napake.';
+              }
+            }
         });
     });
   }
