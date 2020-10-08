@@ -33,6 +33,7 @@ import {AuthGuard} from './content/guards/auth.guard';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {GravatarModule} from 'ngx-gravatar';
 import {PopoverModule} from 'ngx-bootstrap/popover';
+import {SidebarToggleDirective} from './content/directives/sidebar-toggle/sidebar-toggle.directive';
 
 declare global {
   const Snap: typeof snap;
@@ -52,7 +53,9 @@ declare global {
     FloorAddEditComponent,
     ViewComponent,
     FloorDetailsComponent,
-    LoginComponent
+    LoginComponent,
+
+    SidebarToggleDirective
   ],
   imports: [
     BrowserModule,
