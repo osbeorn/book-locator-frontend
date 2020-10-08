@@ -27,10 +27,19 @@
 
   <div class="col-12">
     <div class="card shadow mt-4">
-      <div class="card-header">
+      <div class="card-header d-flex flex-row align-items-center justify-content-between">
         Lokacije gradiva
+        <i class="fa fa-info-circle cursor-pointer" popoverTitle="Legenda barv" [popover]="popoverLegendTemplate" placement="left" [outsideClick]="true"></i>
       </div>
       <div class="card-body">
+        <div class="row" *ngIf="racksIncomplete">
+          <div class="col-12">
+            <div class="alert alert-info" role="alert">
+              Na tlorisu obstajajo regali, ki nimajo definiranih preslikav lokacij gradiva ali pa vsebujejo nepravilno nastavljene (prazne) preslikave.<br />
+              Prosimo preverite <strong [style]="'color: ' + RACK_HAS_NO_CONTENTS_FILL_COLOR">rdeče</strong> obarvane regale.
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-12">
             <div class="row">
@@ -103,3 +112,9 @@
     </div>
   </div>
 </div>
+
+<ng-template #popoverLegendTemplate>
+  <strong [style]="'color: ' + RACK_HAS_CONTENTS_FILL_COLOR">Zelena</strong>: Regali s prisotnimi in pravilno izpolnjenimi preslikavami<br />
+  <strong [style]="'color: ' + RACK_HAS_NO_CONTENTS_FILL_COLOR">Rdeča</strong>: Regali brez preslikav ali z nepravilno izpolnjenimi preslikavami<br />
+  <strong [style]="'color: ' + RACK_SELECTED_FILL_COLOR">Modra</strong>: Trenutno izbran regal
+</ng-template>

@@ -16,22 +16,32 @@ import {finalize} from 'rxjs/operators';
 })
 export class DetailsComponent implements OnInit {
 
-  private RACK_DEFAULT_FILL_COLOR = 'none';
-  private RACK_SELECTED_FILL_COLOR = '#4E73DF';
-  private RACK_IN_HOVER_FILL_COLOR = '#224ABE';
-  private RACK_OUT_HOVER_FILL_COLOR = 'none';
+  RACK_DEFAULT_FILL_COLOR = 'none';
+  RACK_SELECTED_FILL_COLOR = '#4E73DF';
+  RACK_IN_HOVER_FILL_COLOR = '#2E59D9';
+  RACK_HAS_NO_CONTENTS_FILL_COLOR = '#E74A3B';
+  RACK_HAS_CONTENTS_FILL_COLOR = '#1CC88A';
+  RACK_OUT_HOVER_FILL_COLOR = 'none';
+
+  RACK_HOVER_CLASS = 'rack-hover';
+  RACK_SELECTED_CLASS = 'rack-selected';
+  RACK_HAS_NO_CONTENT_CLASS = 'rack-incomplete';
+  RACK_HAS_CONTENT_CLASS = 'rack-completed';
 
   private snap: Paper;
 
   id: string;
 
   floor: Floor = {};
+
   racks: Rack[];
+  private racksSubject: ReplaySubject<Rack[]> = new ReplaySubject<Rack[]>(1);
+  racksIncomplete: boolean = false;
 
   library: Library = {};
 
   floorRackCodeIdentifier: string;
-  floorRackCodeIdentifierSubject: ReplaySubject<string> = new ReplaySubject<string>(1);
+  private floorRackCodeIdentifierSubject: ReplaySubject<string> = new ReplaySubject<string>(1);
 
   selectedRack: SelectedRack;
 
@@ -65,6 +75,7 @@ export class DetailsComponent implements OnInit {
         this.floorService.getFloorRacks(this.id, 'id,code,contents.id,contents.identifier,contents.regex', '', '', 0, 0)
           .subscribe(res => {
             this.racks = res.body;
+            this.racksSubject.next(this.racks);
           });
       }
     });
@@ -78,73 +89,9 @@ export class DetailsComponent implements OnInit {
     this.snap = Snap('.floor-plan-container > svg');
 
     this.floorRackCodeIdentifierSubject.subscribe(rackCodeIdentifier => {
-      this.snap
-        .selectAll(`[${rackCodeIdentifier}]`)
-        .attr({
-          'pointer-events': 'visible' // enable pointer events; see https://www.w3.org/TR/SVG/interact.html#PointerEventsProperty
-        })
-        .forEach(el => {
-          el.hover(
-            () => {
-              if (!el.hasClass('rack-selected')) {
-                el.addClass('rack-hover');
-
-                el.attr({
-                  fill: this.RACK_IN_HOVER_FILL_COLOR
-                });
-              }
-            },
-            () => {
-              el.removeClass('rack-hover');
-
-              if (!el.hasClass('rack-selected')) {
-                el.attr({
-                  fill: this.RACK_OUT_HOVER_FILL_COLOR
-                });
-              }
-            }
-          );
-
-          el.click(() => {
-            this.elementSelected(el);
-          });
-        });
+      this.configureFloorPlanEvents(rackCodeIdentifier);
+      this.setRackContentsCompletionData(rackCodeIdentifier);
     });
-  }
-
-  elementSelected(element: Snap.Element): void {
-    element.paper
-      .selectAll('.rack-selected')
-      .forEach(el2 => {
-
-        el2
-          .removeClass('rack-selected')
-          .attr({
-            fill: this.RACK_DEFAULT_FILL_COLOR
-          });
-      });
-
-    element
-      .addClass('rack-selected')
-      .attr({
-        fill: this.RACK_SELECTED_FILL_COLOR
-      });
-
-    this.rackSelected(element);
-  }
-
-  rackSelected(el: Snap.Element): void {
-    const code = el.attr(this.floor.rackCodeIdentifier);
-    const rack = this.getRackByCode(code);
-
-    if (this.selectedRack && this.selectedRack.rack.code === rack.code) {
-      return;
-    }
-
-    this.selectedRack = {
-      element: el,
-      rack
-    };
   }
 
   addRackContent(): void {
@@ -174,6 +121,137 @@ export class DetailsComponent implements OnInit {
         finalize(() => this.ladda.saveRacksInProgress = false)
       )
       .subscribe(res => console.log(res));
+  }
+
+  private configureFloorPlanEvents(rackCodeIdentifier: string): void {
+    this.snap
+      .selectAll(`[${rackCodeIdentifier}]`)
+      .attr({
+        'pointer-events': 'visible' // enable pointer events; see https://www.w3.org/TR/SVG/interact.html#PointerEventsProperty
+      })
+      .forEach(el => {
+        el.hover(
+          () => {
+            if (!el.hasClass(this.RACK_SELECTED_CLASS)) {
+              el.addClass(this.RACK_HOVER_CLASS);
+
+              el.attr({
+                fill: this.RACK_IN_HOVER_FILL_COLOR,
+              });
+            }
+          },
+          () => {
+            el.removeClass(this.RACK_HOVER_CLASS);
+
+            if (!el.hasClass(this.RACK_SELECTED_CLASS)) {
+              let fill = this.RACK_OUT_HOVER_FILL_COLOR;
+
+              if (el.hasClass(this.RACK_HAS_CONTENT_CLASS)) {
+                fill = this.RACK_HAS_CONTENTS_FILL_COLOR;
+              } else if (el.hasClass(this.RACK_HAS_NO_CONTENT_CLASS)) {
+                fill = this.RACK_HAS_NO_CONTENTS_FILL_COLOR;
+              }
+
+              el.attr({
+                fill
+              });
+            }
+          }
+        );
+
+        el.click(() => {
+          this.elementSelected(el);
+        });
+      });
+  }
+
+  private elementSelected(element: Snap.Element): void {
+    element.paper
+      .selectAll(`.${this.RACK_SELECTED_CLASS}`)
+      .forEach(el2 => {
+        console.log(el2);
+
+        el2.removeClass(this.RACK_SELECTED_CLASS);
+
+        let fill = this.RACK_DEFAULT_FILL_COLOR;
+
+        if (el2.hasClass(this.RACK_HAS_CONTENT_CLASS)) {
+          fill = this.RACK_HAS_CONTENTS_FILL_COLOR;
+        } else if (el2.hasClass(this.RACK_HAS_NO_CONTENT_CLASS)) {
+          fill = this.RACK_HAS_NO_CONTENTS_FILL_COLOR;
+        }
+
+        el2.attr({
+          fill
+        });
+      });
+
+    element
+      .addClass(this.RACK_SELECTED_CLASS)
+      .attr({
+        fill: this.RACK_SELECTED_FILL_COLOR
+      });
+
+    this.rackSelected(element);
+  }
+
+  private rackSelected(el: Snap.Element): void {
+    const code = el.attr(this.floor.rackCodeIdentifier);
+    const rack = this.getRackByCode(code);
+
+    if (this.selectedRack && this.selectedRack.rack.code === rack.code) {
+      return;
+    }
+
+    this.selectedRack = {
+      element: el,
+      rack
+    };
+  }
+
+  private setRackContentsCompletionData(rackCodeIdentifier: string): void {
+    this.racksSubject.subscribe(() => {
+      // racks with 1 or more content where every content must have the identifier filled out
+      const completedRacksSelector = this.racks
+        .filter(r => r.contents && r.contents.length > 0 && r.contents.every(rc => rc.identifier))
+        .map(r => `[${rackCodeIdentifier}=${r.code}]`)
+        .join(', ');
+
+      // racks with no contents or racks with 1 or more content where not every content has the identifier filled out
+      const incompleteRacksSelector = this.racks
+        .filter(r =>
+          !r.contents || r.contents.length === 0 ||
+          (r.contents && r.contents.length > 0 && !r.contents.every(rc => rc.identifier))
+        )
+        .map(r => `[${rackCodeIdentifier}=${r.code}]`)
+        .join(', ');
+
+      if (completedRacksSelector) {
+        this.racksIncomplete = false;
+
+        this.snap
+          .selectAll(completedRacksSelector)
+          .attr({
+            fill: this.RACK_HAS_CONTENTS_FILL_COLOR
+          })
+          .forEach(el => {
+            el.addClass(this.RACK_HAS_CONTENT_CLASS);
+          });
+      }
+
+      if (incompleteRacksSelector) {
+        this.racksIncomplete = true;
+
+        this.snap
+          .selectAll(incompleteRacksSelector)
+          .attr({
+            fill: this.RACK_HAS_NO_CONTENTS_FILL_COLOR
+          })
+          .forEach(el => {
+            el.addClass(this.RACK_HAS_NO_CONTENT_CLASS);
+          });
+      }
+    });
   }
 
   private getRackByCode(code: string): Rack {
