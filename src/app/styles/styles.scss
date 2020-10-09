@@ -69,3 +69,15 @@ html, body {
     color: var(--primary-color);
   }
 }
+
+.scroll-to-top {
+  display: block;
+  visibility: hidden;
+  background: rgba(90, 92, 105, 0);
+  transition: visibility 0s, background 0.25s linear;
+}
+
+.scroll-to-top.visible {
+  visibility: visible;
+  background: rgba(90, 92, 105, 0.5);
+}

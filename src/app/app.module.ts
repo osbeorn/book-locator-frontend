@@ -34,6 +34,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {GravatarModule} from 'ngx-gravatar';
 import {PopoverModule} from 'ngx-bootstrap/popover';
 import {SidebarToggleDirective} from './content/directives/sidebar-toggle/sidebar-toggle.directive';
+import {ScrollToTopDirective} from './content/directives/scroll-to-top/scroll-to-top.directive';
 
 declare global {
   const Snap: typeof snap;
@@ -55,7 +56,8 @@ declare global {
     FloorDetailsComponent,
     LoginComponent,
 
-    SidebarToggleDirective
+    SidebarToggleDirective,
+    ScrollToTopDirective
   ],
   imports: [
     BrowserModule,
