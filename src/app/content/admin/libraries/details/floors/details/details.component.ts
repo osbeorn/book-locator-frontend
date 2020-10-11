@@ -120,7 +120,7 @@ export class DetailsComponent implements OnInit {
       .pipe(
         finalize(() => this.ladda.saveRacksInProgress = false)
       )
-      .subscribe(res => console.log(res));
+      .subscribe(() => this.router.navigate(['/', 'admin', 'libraries', this.library.id]));
   }
 
   private configureFloorPlanEvents(rackCodeIdentifier: string): void {
