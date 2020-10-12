@@ -100,7 +100,7 @@ export class SearchComponent implements OnInit {
       .attr({
         style: 'cursor: zoom-in;'
       })
-      .addClass('h-100 m-auto d-block');
+      .addClass('h-100 mw-100 m-auto d-block');
 
     this.snap.click(() => {
       this.doZoom();
