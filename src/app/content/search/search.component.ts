@@ -16,7 +16,7 @@ import {finalize} from 'rxjs/operators';
 })
 export class SearchComponent implements OnInit {
 
-  private RACK_SELECTED_FILL_COLOR = '#930042';
+  private RACK_SELECTED_FILL_COLOR = '#4E73DF';
 
   public query: string;
   public zoomedIn: boolean = false;
@@ -113,6 +113,8 @@ export class SearchComponent implements OnInit {
 
   private highlightLocation(): void {
     if (this.racks) {
+      let highlightedRacks = [];
+
       this.racks
         .forEach(r => {
           const element = this.snap.select(`[${this.floor.rackCodeIdentifier}="${r.code}"]`);
@@ -128,8 +130,23 @@ export class SearchComponent implements OnInit {
                 fill: this.RACK_SELECTED_FILL_COLOR
               })
               .append(title);
+
+            highlightedRacks.push(element);
           }
         });
+
+      let rackGroup = this.snap.group();
+      highlightedRacks.forEach(hr => rackGroup.add(hr));
+
+      this.blinkLocation(rackGroup);
     }
+  }
+
+  blinkLocation(rackGroup: Paper): void {
+    rackGroup.animate({ 'fill-opacity': 0}, 1000, mina.linear, () => this.unblinkLocation(rackGroup));
+  }
+
+  unblinkLocation(rackGroup: Paper): void {
+    rackGroup.animate({ 'fill-opacity': 1 }, 1000, mina.linear, () => this.blinkLocation(rackGroup));
   }
 }
