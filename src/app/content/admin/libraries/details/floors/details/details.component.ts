@@ -94,6 +94,12 @@ export class DetailsComponent implements OnInit {
     });
   }
 
+  onRackContentKeypress(event: KeyboardEvent): void {
+    if (event.key === 'Enter') {
+      this.addRackContent();
+    }
+  }
+
   addRackContent(): void {
     if (!this.selectedRack.rack.contents) {
       this.selectedRack.rack.contents = [];

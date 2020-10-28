@@ -66,13 +66,16 @@
                         </button>
                       </div>
 
-                      <input type="text" class="form-control" [(ngModel)]="rackContent.identifier">
+                      <input type="text" class="form-control" [(ngModel)]="rackContent.identifier"
+                             (keypress)="onRackContentKeypress($event)">
 
                       <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" (click)="removeRackContent(index)">
+                        <button *ngIf="selectedRack.rack.contents && selectedRack.rack.contents.length !== 1"
+                                class="btn btn-outline-secondary" type="button" (click)="removeRackContent(index)">
                           <i class="fa fa-xs fa-minus"></i>
                         </button>
-                        <button *ngIf="last" class="btn btn-outline-secondary" type="button" (click)="addRackContent()">
+                        <button *ngIf="last" class="btn btn-outline-secondary" type="button" (click)="addRackContent()"
+                                [disabled]="!rackContent.identifier || rackContent.identifier.length === 0">
                           <i class="fa fa-xs fa-plus"></i>
                         </button>
                       </div>
