@@ -101,20 +101,18 @@
       <div class="card-header">
         Prikaz števila iskanj v zadnjih sedmih dneh
       </div>
-      <div class="card-body">
-        <div class="row no-gutters">
-          <ngx-charts-bar-vertical
-            [scheme]="colorScheme"
-            [results]="data"
-            [gradient]="gradient"
-            [xAxis]="showXAxis"
-            [yAxis]="showYAxis"
-            [showXAxisLabel]="showXAxisLabel"
-            [showYAxisLabel]="showYAxisLabel"
-            [xAxisLabel]="xAxisLabel"
-            [yAxisLabel]="yAxisLabel">
-          </ngx-charts-bar-vertical>
-        </div>
+      <div class="card-body pl-0">
+        <ngx-charts-bar-vertical
+          [scheme]="colorScheme"
+          [results]="data"
+          [gradient]="gradient"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel">
+        </ngx-charts-bar-vertical>
       </div>
     </div>
   </div>
