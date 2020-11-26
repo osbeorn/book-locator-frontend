@@ -79,8 +79,6 @@ export class DashboardComponent implements OnInit {
         }
 
         this.data = [...tmpData];
-
-        console.log(this.data);
       });
   }
 }

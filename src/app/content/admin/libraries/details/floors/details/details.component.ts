@@ -175,8 +175,6 @@ export class DetailsComponent implements OnInit {
     element.paper
       .selectAll(`.${this.RACK_SELECTED_CLASS}`)
       .forEach(el2 => {
-        console.log(el2);
-
         el2.removeClass(this.RACK_SELECTED_CLASS);
 
         let fill = this.RACK_DEFAULT_FILL_COLOR;

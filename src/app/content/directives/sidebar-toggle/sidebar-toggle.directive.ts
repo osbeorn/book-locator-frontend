@@ -13,7 +13,14 @@ export class SidebarToggleDirective {
 
   @HostListener('click')
   click(): void {
-    this.el.nativeElement.closest('body').classList.toggle('sidebar-toggled');
-    this.el.nativeElement.closest('.sidebar').classList.toggle('toggled');
+    const body = document.getElementsByTagName('body')[0];
+    const sidebar = document.getElementsByClassName('sidebar')[0];
+
+    body.classList.toggle('sidebar-toggled');
+    sidebar.classList.toggle('toggled');
+
+    // if (sidebar.classList.contains('toggled')) {
+    //
+    // }
   }
 }
