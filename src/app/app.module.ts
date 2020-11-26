@@ -35,6 +35,8 @@ import {GravatarModule} from 'ngx-gravatar';
 import {PopoverModule} from 'ngx-bootstrap/popover';
 import {SidebarToggleDirective} from './content/directives/sidebar-toggle/sidebar-toggle.directive';
 import {ScrollToTopDirective} from './content/directives/scroll-to-top/scroll-to-top.directive';
+import {StatisticService} from './services/statistic.service';
+import {NgxChartsModule} from '@swimlane/ngx-charts';
 
 declare global {
   const Snap: typeof snap;
@@ -78,7 +80,8 @@ declare global {
       style: 'zoom-out',
       spinnerLines: 12
     }),
-    GravatarModule
+    GravatarModule,
+    NgxChartsModule
   ],
   providers: [
     AuthGuard,
@@ -87,7 +90,8 @@ declare global {
     FloorService,
     LibraryService,
     LookupService,
-    SearchService
+    SearchService,
+    StatisticService
   ],
   bootstrap: [AppComponent]
 })
