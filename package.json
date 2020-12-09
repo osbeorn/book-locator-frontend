@@ -26,6 +26,7 @@
     "angular2-ladda": "^3.1.1",
     "bootstrap": "^4.5.3",
     "classlist.js": "^1.1.20150312",
+    "core-js": "^3.8.1",
     "ladda": "^2.0.1",
     "luxon": "^1.25.0",
     "ng-inline-svg": "^11.0.0",
