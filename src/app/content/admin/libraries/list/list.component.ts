@@ -39,8 +39,9 @@ export class ListComponent implements OnInit {
     if (event) {
       if (event.filters) {
         Object.entries(event.filters).forEach(([key, value]) => {
-          filter += `${key}:${value.matchMode}:${value.value}`;
+          filter += `${key}:${value.matchMode}:${value.value} `;
         });
+        filter = filter.trim();
       }
 
       if (event.sortField) {
