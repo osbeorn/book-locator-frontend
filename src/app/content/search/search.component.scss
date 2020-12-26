@@ -11,12 +11,8 @@
       height: 80vh;
     }
   }
-}
 
-.topbar {
-  .dropdown {
-    .dropdown-menu {
-      left: 0.75rem;
-    }
+  .topbar .dropdown .dropdown-menu {
+        left: 0.75rem !important;
   }
 }
