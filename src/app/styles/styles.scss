@@ -81,3 +81,7 @@ html, body {
   visibility: visible;
   background: rgba(90, 92, 105, 0.5);
 }
+
+.topbar .dropdown .dropdown-menu {
+  left: 0.75rem !important;
+}
