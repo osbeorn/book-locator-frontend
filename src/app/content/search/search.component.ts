@@ -77,6 +77,17 @@ export class SearchComponent implements OnInit {
                 case 'missing.required.search.parameters':
                   this.errorMessage = 'Pri iskanju niste podali obveznih parametrov L in/ali U.';
                   break;
+                case 'resource.not.found':
+                  let resource = res.error.params.resource;
+                  const identifier = res.error.params.identifier;
+
+                  switch (resource) {
+                    case 'Floor':
+                      resource = 'Nadstropje';
+                  }
+
+                  this.errorMessage = `${resource} z identifikatorjem ${identifier} ne obstaja.`;
+                  break;
                 default:
                   this.errorMessage = 'Pri iskanju je prišlo do nepričakovane napake.';
               }
