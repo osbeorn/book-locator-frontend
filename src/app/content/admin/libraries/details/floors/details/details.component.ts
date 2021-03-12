@@ -142,8 +142,19 @@ export class DetailsComponent implements OnInit {
               el.addClass(this.RACK_HOVER_CLASS);
 
               el.attr({
-                fill: this.RACK_IN_HOVER_FILL_COLOR,
+                fill: this.RACK_IN_HOVER_FILL_COLOR
               });
+
+              const elChildren = el.children();
+              if (elChildren && elChildren.length > 0) {
+                elChildren
+                  .filter(elC => elC.paper)
+                  .forEach(elC => {
+                    elC.attr({
+                      fill: this.RACK_IN_HOVER_FILL_COLOR
+                    });
+                  });
+              }
             }
           },
           () => {
@@ -161,6 +172,17 @@ export class DetailsComponent implements OnInit {
               el.attr({
                 fill
               });
+
+              const elChildren = el.children();
+              if (elChildren && elChildren.length > 0) {
+                elChildren
+                  .filter(elC => elC.paper)
+                  .forEach(elC => {
+                    elC.attr({
+                      fill
+                    });
+                  });
+              }
             }
           }
         );
@@ -188,6 +210,17 @@ export class DetailsComponent implements OnInit {
         el2.attr({
           fill
         });
+
+        const el2Children = el2.children();
+        if (el2Children && el2Children.length > 0) {
+          el2Children
+            .filter(el2C => el2C.paper)
+            .forEach(el2C => {
+              el2C.attr({
+                fill
+              });
+            });
+        }
       });
 
     element
@@ -195,6 +228,17 @@ export class DetailsComponent implements OnInit {
       .attr({
         fill: this.RACK_SELECTED_FILL_COLOR
       });
+
+    const elementChildren = element.children();
+    if (elementChildren && elementChildren.length > 0) {
+      elementChildren
+        .filter(elementC => elementC.paper)
+        .forEach(elementC => {
+          elementC.attr({
+            fill: this.RACK_SELECTED_FILL_COLOR
+          });
+        });
+    }
 
     this.rackSelected(element);
   }
@@ -219,7 +263,7 @@ export class DetailsComponent implements OnInit {
       const completedRacksSelector = this.racks
         .filter(r => r.contents && r.contents.length > 0 && r.contents.every(rc => rc.identifier))
         .map(r => `[${rackCodeIdentifier}=${r.code.replace(/\./g, '\\.')}]`)
-        .join(', ');
+        .join(',');
 
       // racks with no contents or racks with 1 or more content where not every content has the identifier filled out
       const incompleteRacksSelector = this.racks
@@ -233,8 +277,20 @@ export class DetailsComponent implements OnInit {
       if (completedRacksSelector) {
         this.racksIncomplete = false;
 
-        this.snap
-          .selectAll(completedRacksSelector)
+        const selectedElements = this.snap
+          .selectAll(completedRacksSelector);
+
+        const selectedElementChildren = [];
+        selectedElements.forEach(el => {
+          let elChildren = el.children();
+          if (elChildren && elChildren.length > 0) {
+            elChildren = elChildren.filter(elC => elC.paper);
+            selectedElementChildren.push(...elChildren);
+          }
+        });
+        selectedElementChildren.forEach(el => selectedElements.push(el));
+
+        selectedElements
           .attr({
             fill: this.RACK_HAS_CONTENTS_FILL_COLOR
           })
@@ -246,8 +302,20 @@ export class DetailsComponent implements OnInit {
       if (incompleteRacksSelector) {
         this.racksIncomplete = true;
 
-        this.snap
-          .selectAll(incompleteRacksSelector)
+        const selectedElements = this.snap
+          .selectAll(incompleteRacksSelector);
+
+        const selectedElementChildren = [];
+        selectedElements.forEach(el => {
+          let elChildren = el.children();
+          if (elChildren && elChildren.length > 0) {
+            elChildren = elChildren.filter(elC => elC.paper);
+            selectedElementChildren.push(...elChildren);
+          }
+        });
+        selectedElementChildren.forEach(el => selectedElements.push(el));
+
+        selectedElements
           .attr({
             fill: this.RACK_HAS_NO_CONTENTS_FILL_COLOR
           })
