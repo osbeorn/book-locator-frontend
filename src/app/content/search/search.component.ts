@@ -128,7 +128,7 @@ export class SearchComponent implements OnInit {
 
       this.racks
         .forEach(r => {
-          const element = this.snap.select(`[${this.floor.rackCodeIdentifier}="${r.code}"]`);
+          const element = this.snap.select(`[${this.floor.rackCodeIdentifier}="${r.code.replace(/\./g, '\\.')}"]`);
 
           const title = this.snap.el('title', {});
           if (this.udkName) {
