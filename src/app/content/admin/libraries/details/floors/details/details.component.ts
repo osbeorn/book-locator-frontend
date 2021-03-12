@@ -218,7 +218,7 @@ export class DetailsComponent implements OnInit {
       // racks with 1 or more content where every content must have the identifier filled out
       const completedRacksSelector = this.racks
         .filter(r => r.contents && r.contents.length > 0 && r.contents.every(rc => rc.identifier))
-        .map(r => `[${rackCodeIdentifier}=${r.code}]`)
+        .map(r => `[${rackCodeIdentifier}=${r.code.replace(/\./g, '\\.')}]`)
         .join(', ');
 
       // racks with no contents or racks with 1 or more content where not every content has the identifier filled out
@@ -227,7 +227,7 @@ export class DetailsComponent implements OnInit {
           !r.contents || r.contents.length === 0 ||
           (r.contents && r.contents.length > 0 && !r.contents.every(rc => rc.identifier))
         )
-        .map(r => `[${rackCodeIdentifier}=${r.code}]`)
+        .map(r => `[${rackCodeIdentifier}=${r.code.replace(/\./g, '\\.')}]`)
         .join(', ');
 
       if (completedRacksSelector) {
