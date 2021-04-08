@@ -24,7 +24,7 @@
               <a *ngIf="internalDesignationInfoUrl" href="{{ internalDesignationInfoUrl }}" target="_blank">
                 {{I}}{{internalDesignationName ? ' = ' + internalDesignationName : ''}}
               </a>
-              <ng-template *ngIf="!internalDesignationInfoUrl">
+              <ng-template [ngIf]="!internalDesignationInfoUrl">
                 {{I}}{{internalDesignationName ? ' = ' + internalDesignationName : ''}}
               </ng-template>
             </strong>
