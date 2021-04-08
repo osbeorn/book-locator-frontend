@@ -15,4 +15,7 @@ export class SearchResponse {
   racks?: Rack[];
 
   udkName?: string;
+  internalDesignationName?: string;
+  internalDesignationDescription?: string;
+  internalDesignationInfoUrl?: string;
 }

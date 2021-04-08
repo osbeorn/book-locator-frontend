@@ -30,8 +30,12 @@ export class SearchComponent implements OnInit {
   public racks: Rack[] = [];
 
   public U: string;
+  public I: string;
 
   public udkName: string;
+  public internalDesignationName: string;
+  public internalDesignationDescription: string;
+  public internalDesignationInfoUrl: string;
 
   public floorPlanUrl: string;
 
@@ -61,7 +65,11 @@ export class SearchComponent implements OnInit {
               this.floor = res.floor;
               this.racks = res.racks;
               this.U = res.U;
+              this.I = res.I;
               this.udkName = res.udkName;
+              this.internalDesignationName = res.internalDesignationName;
+              this.internalDesignationDescription = res.internalDesignationDescription;
+              this.internalDesignationInfoUrl = res.internalDesignationInfoUrl;
 
               this.floorPlanUrl = this.floorService.getFloorPlanUrl(res.floor.id);
             }
@@ -124,11 +132,11 @@ export class SearchComponent implements OnInit {
 
   private highlightLocation(): void {
     if (this.racks) {
-      let highlightedRacks = [];
+      const highlightedRacks = [];
 
       this.racks
         .forEach(r => {
-          const element = this.snap.select(`[${this.floor.rackCodeIdentifier}="${r.code.replace(/\./g, '\\.')}"]`);
+          const element = this.snap.select(`[${this.floor.rackCodeSelector.attribute}="${r.code.replace(/\./g, '\\.')}"]`);
 
           const title = this.snap.el('title', {});
           if (this.udkName) {
@@ -146,7 +154,7 @@ export class SearchComponent implements OnInit {
           }
         });
 
-      let rackGroup = this.snap.group();
+      const rackGroup = this.snap.group();
       highlightedRacks.forEach(hr => rackGroup.add(hr));
 
       this.blinkLocation(rackGroup);

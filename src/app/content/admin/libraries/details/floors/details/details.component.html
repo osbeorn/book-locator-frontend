@@ -15,10 +15,15 @@
       </div>
       <div class="card-body">
         <div class="row">
-          <div class="col-12 form-group">
-            <label for="rack-code-identifier">Atribut oznake regalov</label>
-            <input type="text" id="rack-code-identifier" readonly
-                   [(ngModel)]="floor.rackCodeIdentifier" name="rack-code-identifier" class="form-control">
+          <div class="col-6 form-group">
+            <label for="rack-code-attribute-selector">Atribut oznake regalov</label>
+            <input type="text" id="rack-code-attribute-selector" readonly
+                   [(ngModel)]="floor.rackCodeSelector.attribute" name="rack-code-attribute-selector" class="form-control">
+          </div>
+          <div class="col-6 form-group">
+            <label for="rack-code-value-selector">Vrednost atributa oznake regalov</label>
+            <input type="text" id="rack-code-value-selector" readonly
+                   [(ngModel)]="floor.rackCodeSelector.value" name="rack-code-value-selector" class="form-control">
           </div>
         </div>
       </div>

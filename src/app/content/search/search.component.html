@@ -1,9 +1,5 @@
 <div id="wrapper">
   <div id="content-wrapper" class="d-flex flex-column">
-    <h3 class="text-center pt-3 mb-3">
-      Lokator gradiva
-    </h3>
-
     <div class="row mt-5" *ngIf="loading">
       <div class="col-12">
         <span class="d-block text-center">
@@ -13,14 +9,27 @@
     </div>
 
     <div *ngIf="!loading && !error">
-      <div class="row">
+      <div class="row mt-3">
         <div class="col-lg-9 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
           <em>Lokacija</em>: <strong>{{library?.name}} - {{floor?.name}}</strong>
         </div>
       </div>
       <div class="row mb-4">
         <div class="col-lg-9 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
-          <em>UDK</em>: <strong>{{U}}{{udkName ? ' - ' + udkName : ''}}</strong>
+          <em>UDK</em>: <strong>{{U}}{{udkName ? ' = ' + udkName : ''}}</strong>
+          <br />
+          <div>
+            <em>Interna oznaka</em>:&nbsp;
+            <strong>
+              <a *ngIf="internalDesignationInfoUrl" href="{{ internalDesignationInfoUrl }}" target="_blank">
+                {{I}}{{internalDesignationName ? ' = ' + internalDesignationName : ''}}
+              </a>
+              <ng-template *ngIf="!internalDesignationInfoUrl">
+                {{I}}{{internalDesignationName ? ' = ' + internalDesignationName : ''}}
+              </ng-template>
+            </strong>
+            {{ internalDesignationDescription ? ' (' + internalDesignationDescription + ')' : '' }}
+          </div>
         </div>
       </div>
 

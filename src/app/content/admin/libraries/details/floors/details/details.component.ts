@@ -65,8 +65,9 @@ export class DetailsComponent implements OnInit {
         this.floorService.getFloor(this.id)
           .subscribe(res => {
             this.floor = res;
-            this.floorRackCodeIdentifier = this.floor.rackCodeIdentifier;
-            this.floorRackCodeIdentifierSubject.next(this.floor.rackCodeIdentifier);
+            // TODO - use both attribute and value
+            this.floorRackCodeIdentifier = this.floor.rackCodeSelector.attribute;
+            this.floorRackCodeIdentifierSubject.next(this.floor.rackCodeSelector.attribute);
 
             this.libraryService.getLibrary(this.floor.libraryId)
               .subscribe(res2 => this.library = res2);
@@ -88,9 +89,11 @@ export class DetailsComponent implements OnInit {
   processFloorPlan(): void {
     this.snap = Snap('.floor-plan-container > svg');
 
-    this.floorRackCodeIdentifierSubject.subscribe(rackCodeIdentifier => {
-      this.configureFloorPlanEvents(rackCodeIdentifier);
-      this.setRackContentsCompletionData(rackCodeIdentifier);
+    // TODO - combine racksSubject and floorRackCodeIdentifierSubject
+
+    this.floorRackCodeIdentifierSubject.subscribe(rackCodeAttributeSelector => {
+      this.configureFloorPlanEvents(rackCodeAttributeSelector);
+      this.setRackContentsCompletionData(rackCodeAttributeSelector);
     });
   }
 
@@ -129,9 +132,9 @@ export class DetailsComponent implements OnInit {
       .subscribe(() => this.router.navigate(['/', 'admin', 'libraries', this.library.id]));
   }
 
-  private configureFloorPlanEvents(rackCodeIdentifier: string): void {
+  private configureFloorPlanEvents(rackCodeAttributeSelector: string): void {
     this.snap
-      .selectAll(`[${rackCodeIdentifier}]`)
+      .selectAll(`[${rackCodeAttributeSelector}]`)
       .attr({
         'pointer-events': 'visible' // enable pointer events; see https://www.w3.org/TR/SVG/interact.html#PointerEventsProperty
       })
@@ -244,7 +247,7 @@ export class DetailsComponent implements OnInit {
   }
 
   private rackSelected(el: Snap.Element): void {
-    const code = el.attr(this.floor.rackCodeIdentifier);
+    const code = el.attr(this.floor.rackCodeSelector.attribute);
     const rack = this.getRackByCode(code);
 
     if (this.selectedRack && this.selectedRack.rack.code === rack.code) {
@@ -257,12 +260,12 @@ export class DetailsComponent implements OnInit {
     };
   }
 
-  private setRackContentsCompletionData(rackCodeIdentifier: string): void {
+  private setRackContentsCompletionData(rackCodeAttributeSelector: string): void {
     this.racksSubject.subscribe(() => {
       // racks with 1 or more content where every content must have the identifier filled out
       const completedRacksSelector = this.racks
         .filter(r => r.contents && r.contents.length > 0 && r.contents.every(rc => rc.identifier))
-        .map(r => `[${rackCodeIdentifier}=${r.code.replace(/\./g, '\\.')}]`)
+        .map(r => `[${rackCodeAttributeSelector}=${r.code.replace(/\./g, '\\.')}]`)
         .join(',');
 
       // racks with no contents or racks with 1 or more content where not every content has the identifier filled out
@@ -271,7 +274,7 @@ export class DetailsComponent implements OnInit {
           !r.contents || r.contents.length === 0 ||
           (r.contents && r.contents.length > 0 && !r.contents.every(rc => rc.identifier))
         )
-        .map(r => `[${rackCodeIdentifier}=${r.code.replace(/\./g, '\\.')}]`)
+        .map(r => `[${rackCodeAttributeSelector}=${r.code.replace(/\./g, '\\.')}]`)
         .join(', ');
 
       if (completedRacksSelector) {

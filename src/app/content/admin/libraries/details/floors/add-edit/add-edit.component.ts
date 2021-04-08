@@ -23,7 +23,9 @@ export class AddEditComponent implements OnInit {
   libraryId: string;
   floorId: string;
 
-  floor: Floor = {};
+  floor: Floor = {
+    rackCodeSelector: {}
+  };
 
   floorPlanFile: File;
 
