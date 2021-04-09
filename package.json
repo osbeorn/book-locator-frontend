@@ -29,7 +29,7 @@
     "core-js": "^3.9.1",
     "ladda": "^2.0.1",
     "luxon": "^1.26.0",
-    "ng-inline-svg": "^11.0.2",
+    "ng-inline-svg": "^12.1.0",
     "ngx-bootstrap": "^6.2.0",
     "ngx-gravatar": "^10.0.0",
     "primeicons": "^4.1.0",
