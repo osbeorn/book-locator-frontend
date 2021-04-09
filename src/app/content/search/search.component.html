@@ -16,9 +16,11 @@
       </div>
       <div class="row mb-4">
         <div class="col-lg-9 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
-          <em>UDK</em>: <strong>{{U}}{{udkName ? ' = ' + udkName : ''}}</strong>
-          <br />
-          <div>
+          <div *ngIf="U">
+            <em>UDK</em>: <strong>{{U}}{{udkName ? ' = ' + udkName : ''}}</strong>
+            <br />
+          </div>
+          <div *ngIf="I">
             <em>Interna oznaka</em>:&nbsp;
             <strong>
               <a *ngIf="internalDesignationInfoUrl" href="{{ internalDesignationInfoUrl }}" target="_blank">
