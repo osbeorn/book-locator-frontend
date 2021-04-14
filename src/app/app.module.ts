@@ -37,6 +37,11 @@ import {SidebarToggleDirective} from './content/directives/sidebar-toggle/sideba
 import {ScrollToTopDirective} from './content/directives/scroll-to-top/scroll-to-top.directive';
 import {StatisticService} from './services/statistic.service';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
+// import {SearchLogsComponent} from './content/admin/search-logs/search-logs.component';
+// import {ListComponent as SearchLogListComponent} from './content/admin/search-logs/list/list.component';
+// import {SearchLogService} from './services/search-log.service';
+import {UrlSerializer} from '@angular/router';
+import CustomUrlSerializer from './utils/custom-url.serializer';
 
 declare global {
   const Snap: typeof snap;
@@ -85,6 +90,11 @@ declare global {
   ],
   providers: [
     AuthGuard,
+
+    {
+      provide: UrlSerializer,
+      useClass: CustomUrlSerializer
+    },
 
     AuthService,
     FloorService,
