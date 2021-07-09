@@ -21,9 +21,9 @@ export class ViewComponent implements OnInit {
   library: Library = {};
 
   floors: Floor[];
-  maxFloors = 20;
+  maxFloors;
   totalFloors: number;
-  loadingFloors = false;
+  loadingFloors: boolean;
 
   constructor(
     private route: ActivatedRoute,
@@ -33,6 +33,11 @@ export class ViewComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log('ngOnInit');
+
+    this.maxFloors = 20;
+    this.loadingFloors = true;
+
     this.route.paramMap.subscribe(p => {
       if (p.has('libraryId')) {
         this.id = p.get('libraryId');
@@ -44,18 +49,34 @@ export class ViewComponent implements OnInit {
   }
 
   loadFloors(event?: LazyLoadEvent): void {
+    console.log('loadFloors');
+    console.log(event);
+
     const fields = 'id,code,name';
     let filter = '';
     let order = '';
     let offset = 0;
     let limit: number = this.maxFloors;
 
+    console.log('limit: ' + this.maxFloors);
+
     this.loadingFloors = true;
 
     if (event) {
       if (event.filters) {
         Object.entries(event.filters).forEach(([key, value]) => {
-          filter += `${key}:${value.matchMode}:${value.value} `;
+          let filterValue;
+
+          switch (value.matchMode) {
+            case 'LIKE':
+            case 'LIKEIC':
+              filterValue = `%${value.value}%`;
+              break;
+            default:
+              filterValue = value.value;
+          }
+
+          filter += `${key}:${value.matchMode}:${filterValue} `;
         });
         filter = filter.trim();
       }
@@ -68,9 +89,16 @@ export class ViewComponent implements OnInit {
         }
       }
 
-      offset = event.first;
-      limit = event.rows;
+      if (event.first) {
+        offset = event.first;
+      }
+      if (event.rows) {
+        limit = event.rows;
+      }
     }
+
+    console.log('offset:' + offset);
+    console.log('limit:' + limit);
 
     this.libraryService.getLibraryFloors(this.id, fields, filter, order, offset, limit)
       .pipe(

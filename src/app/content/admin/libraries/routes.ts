@@ -4,7 +4,6 @@ import {route as listRoute} from './list/routes';
 import {route as addEditRoute} from './add-edit/routes';
 import {route as detailsRoute} from './details/routes';
 
-
 const childRoutes: Routes = [
   listRoute,
   addEditRoute,

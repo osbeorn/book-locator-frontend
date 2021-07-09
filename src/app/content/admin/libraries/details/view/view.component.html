@@ -20,13 +20,26 @@
         <div class="row">
           <div class="col-12">
             <p-table #dt styleClass="p-datatable-sm"
-                     [value]="floors" [rows]="maxFloors" [totalRecords]="totalFloors"
+                     [value]="floors" [paginator]="true" [rows]="maxFloors" [totalRecords]="totalFloors"
                      [lazy]="true" [loading]="loadingFloors" (onLazyLoad)="loadFloors($event)" [filterDelay]="300"
                      [stateStorage]="'local'" [stateKey]="'book-locator.tables.floors'" [rowHover]="true" >
               <ng-template pTemplate="header">
                 <tr>
                   <th pSortableColumn="code">Šifra <p-sortIcon field="code"></p-sortIcon></th>
                   <th pSortableColumn="name">Naziv <p-sortIcon field="name"></p-sortIcon></th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <th>
+                    <input type="text" placeholder="Išči ..." class="form-control bg-light border-0"
+                           (input)="dt.filter($event.target.value, 'code', 'LIKEIC')"
+                           [value]="dt.filters['code']?.value">
+                  </th>
+                  <th>
+                    <input type="text" placeholder="Išči ..." class="form-control bg-light border-0"
+                           (input)="dt.filter($event.target.value, 'name', 'LIKEIC')"
+                           [value]="dt.filters['name']?.value">
+                  </th>
                   <th></th>
                 </tr>
               </ng-template>

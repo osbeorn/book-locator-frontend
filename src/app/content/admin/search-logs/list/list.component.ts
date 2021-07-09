@@ -1,9 +1,9 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {Table} from 'primeng/table';
-import {Library} from '../../../../models/library.model';
-import {LibraryService} from '../../../../services/library.service';
-import {LazyLoadEvent} from 'primeng/api';
+import {LazyLoadEvent, SelectItem} from 'primeng/api';
 import {finalize} from 'rxjs/operators';
+import {SearchLog} from '../../../../models/search-log.model';
+import {SearchLogService} from '../../../../services/search-log.service';
 
 @Component({
   selector: 'app-list',
@@ -14,29 +14,39 @@ export class ListComponent implements OnInit {
 
   @ViewChild('dt') table: Table;
 
-  libraries: Library[];
-  maxLibraries;
-  totalLibraries: number;
-  loadingLibraries: boolean;
+  searchLogs: SearchLog[];
+  maxSearchLogs;
+  totalSearchLogs: number;
+  loadingSearchLogs: boolean;
+
+  customDateMatchModeOptions: SelectItem[];
 
   constructor(
-    private libraryService: LibraryService
+    private searchLogService: SearchLogService
   ) {
   }
 
   ngOnInit(): void {
-    this.maxLibraries = 20;
-    this.loadingLibraries = true;
+    this.maxSearchLogs = 20;
+    this.loadingSearchLogs = true;
+
+    this.customDateMatchModeOptions = [
+      {
+        value: 'EQ', label: 'Je enako'
+      }
+    ];
   }
 
-  loadLibraries(event?: LazyLoadEvent): void {
-    const fields = 'id,code,name';
+  loadSearchLogs(event?: LazyLoadEvent): void {
+    console.log(event);
+
+    const fields = '';
     let filter = '';
     let order = '';
     let offset = 0;
-    let limit: number = this.maxLibraries;
+    let limit: number = this.maxSearchLogs;
 
-    this.loadingLibraries = true;
+    this.loadingSearchLogs = true;
 
     if (event) {
       if (event.filters) {
@@ -44,6 +54,14 @@ export class ListComponent implements OnInit {
           let filterValue;
 
           switch (value.matchMode) {
+            case 'EQ':
+              if (value.value instanceof Date) {
+                const dateValue = value.value as Date;
+                filterValue = `'${dateValue.toISOString()}'`;
+              } else {
+                filterValue = value.value;
+              }
+              break;
             case 'LIKE':
             case 'LIKEIC':
               filterValue = `%${value.value}%`;
@@ -73,13 +91,13 @@ export class ListComponent implements OnInit {
       }
     }
 
-    this.libraryService.getLibraries(fields, filter, order, offset, limit)
+    this.searchLogService.getSearchLogs(fields, filter, order, offset, limit)
       .pipe(
-        finalize(() => this.loadingLibraries = false)
+        finalize(() => this.loadingSearchLogs = false)
       )
       .subscribe(res => {
-        this.libraries = res.body;
-        this.totalLibraries = +res.headers.get('x-total-count');
+        this.searchLogs = res.body;
+        this.totalSearchLogs = +res.headers.get('x-total-count');
       });
   }
 }

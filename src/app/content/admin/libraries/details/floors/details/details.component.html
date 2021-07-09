@@ -71,8 +71,15 @@
                         </button>
                       </div>
 
-                      <input type="text" class="form-control" [(ngModel)]="rackContent.identifier"
-                             (keypress)="onRackContentKeypress($event)">
+<!--                      <input type="text" class="form-control" [(ngModel)]="rackContent.identifier"-->
+<!--                             (keypress)="onRackContentKeypress($event)" placeholder="I U A">-->
+
+                      <input type="text" class="form-control identifier-part" [(ngModel)]="rackContent.identifierPartI"
+                             (keypress)="onRackContentKeypress(rackContent, $event)" placeholder="I">
+                      <input type="text" class="form-control identifier-part" [(ngModel)]="rackContent.identifierPartU"
+                             (keypress)="onRackContentKeypress(rackContent, $event)" placeholder="U">
+                      <input type="text" class="form-control identifier-part" [(ngModel)]="rackContent.identifierPartA"
+                             (keypress)="onRackContentKeypress(rackContent, $event)" placeholder="A">
 
                       <div class="input-group-append">
                         <button *ngIf="selectedRack.rack.contents && selectedRack.rack.contents.length !== 1"
@@ -80,7 +87,9 @@
                           <i class="fa fa-xs fa-minus"></i>
                         </button>
                         <button *ngIf="last" class="btn btn-outline-secondary" type="button" (click)="addRackContent()"
-                                [disabled]="!rackContent.identifier || rackContent.identifier.length === 0">
+                                [disabled]="!rackContent.identifierPartI || rackContent.identifierPartI.length === 0 &&
+                                            !rackContent.identifierPartU || rackContent.identifierPartU.length === 0 &&
+                                            !rackContent.identifierPartA || rackContent.identifierPartA.length === 0">
                           <i class="fa fa-xs fa-plus"></i>
                         </button>
                       </div>

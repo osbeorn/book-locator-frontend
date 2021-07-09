@@ -28,11 +28,13 @@
             <tr>
               <th>
                 <input type="text" placeholder="Išči ..." class="form-control bg-light border-0"
-                       (input)="dt.filter('%' + $event.target.value + '%', 'code', 'LIKEIC')">
+                       (input)="dt.filter($event.target.value, 'code', 'LIKEIC')"
+                       [value]="dt.filters['code']?.value">
               </th>
               <th>
                 <input type="text" placeholder="Išči ..." class="form-control bg-light border-0"
-                       (input)="dt.filter('%' + $event.target.value + '%', 'name', 'LIKEIC')">
+                       (input)="dt.filter($event.target.value, 'name', 'LIKEIC')"
+                       [value]="dt.filters['name']?.value">
               </th>
               <th></th>
             </tr>

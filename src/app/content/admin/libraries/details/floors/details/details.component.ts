@@ -8,6 +8,7 @@ import {Paper} from 'snapsvg';
 import {ReplaySubject} from 'rxjs';
 import {Rack} from '../../../../../../models/rack.model';
 import {finalize} from 'rxjs/operators';
+import {RackContent} from '../../../../../../models/rack-content.model';
 
 @Component({
   selector: 'app-details',
@@ -32,7 +33,9 @@ export class DetailsComponent implements OnInit {
 
   id: string;
 
-  floor: Floor = {};
+  floor: Floor = {
+    rackCodeSelector: {}
+  };
 
   racks: Rack[];
   private racksSubject: ReplaySubject<Rack[]> = new ReplaySubject<Rack[]>(1);
@@ -73,7 +76,15 @@ export class DetailsComponent implements OnInit {
               .subscribe(res2 => this.library = res2);
           });
 
-        this.floorService.getFloorRacks(this.id, 'id,code,contents.id,contents.identifier,contents.regex', '', '', 0, 0)
+        this.floorService
+          .getFloorRacks(
+            this.id,
+            'id,code,contents.id,contents.identifier,contents.identifierPartI,contents.identifierPartU,contents.identifierPartA,contents.regex',
+            '',
+            '',
+            0,
+            0
+          )
           .subscribe(res => {
             this.racks = res.body;
             this.racksSubject.next(this.racks);
@@ -97,8 +108,13 @@ export class DetailsComponent implements OnInit {
     });
   }
 
-  onRackContentKeypress(event: KeyboardEvent): void {
-    if (event.key === 'Enter') {
+  onRackContentKeypress(rackContent: RackContent, event: KeyboardEvent): void {
+    if (event.key === 'Enter' &&
+       (
+          (rackContent.identifierPartI || rackContent.identifierPartU || rackContent.identifierPartA) ||
+          (rackContent.identifierPartI.length > 0 || rackContent.identifierPartU.length > 0 || rackContent.identifierPartA.length > 0)
+       )
+    ) {
       this.addRackContent();
     }
   }
@@ -110,7 +126,10 @@ export class DetailsComponent implements OnInit {
 
     this.selectedRack.rack.contents.push({
       regex: false,
-      identifier: ''
+      identifier: '',
+      identifierPartI: '',
+      identifierPartU: '',
+      identifierPartA: ''
     });
   }
 
@@ -336,7 +355,10 @@ export class DetailsComponent implements OnInit {
         code,
         contents: [{
           regex: false,
-          identifier: ''
+          identifier: '',
+          identifierPartI: '',
+          identifierPartU: '',
+          identifierPartA: ''
         }]
       };
 
@@ -346,7 +368,10 @@ export class DetailsComponent implements OnInit {
     if (!rack.contents) {
       rack.contents = [{
         regex: false,
-        identifier: ''
+        identifier: '',
+        identifierPartI: '',
+        identifierPartU: '',
+        identifierPartA: ''
       }];
     }
 

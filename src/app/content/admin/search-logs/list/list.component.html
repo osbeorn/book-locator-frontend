@@ -1,0 +1,63 @@
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800"></h1>
+</div>
+
+<!-- Content Row -->
+<div class="row">
+  <div class="col-12">
+    <div class="card shadow">
+      <div class="card-header">
+        Seznam iskanj
+      </div>
+      <div class="card-body">
+        <p-table #dt styleClass="p-datatable-sm"
+                 [value]="searchLogs" [paginator]="true" [rows]="maxSearchLogs" [totalRecords]="totalSearchLogs"
+                 [lazy]="true" [loading]="loadingSearchLogs" (onLazyLoad)="loadSearchLogs($event)" [filterDelay]="300"
+                 [rowHover]="true">
+          <ng-template pTemplate="header">
+            <tr>
+              <th pSortableColumn="decodedQuery">Poizvedba <p-sortIcon field="decodedQuery"></p-sortIcon></th>
+              <th pSortableColumn="queryStart">Datum in čas <p-sortIcon field="queryStart"></p-sortIcon></th>
+              <th pSortableColumn="error">Napaka <p-sortIcon field="error"></p-sortIcon></th>
+              <th></th>
+            </tr>
+            <tr>
+              <th>
+                <input type="text" placeholder="Išči ..." class="form-control bg-light border-0"
+                       (input)="dt.filter($event.target.value, 'decodedQuery', 'LIKEIC')">
+              </th>
+              <th>
+                <p-columnFilter type="date" field="queryStart" [locale]="'sl'"
+                                [showOperator]="false" [showMenu]="false"
+                                matchMode="EQ" [matchModeOptions]="customDateMatchModeOptions">
+                </p-columnFilter>
+              </th>
+              <th>
+                <p-columnFilter type="boolean" field="error" matchMode="EQ"></p-columnFilter>
+              </th>
+              <th></th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-searchLog>
+            <tr>
+              <td>{{searchLog.decodedQuery}}</td>
+              <td>{{searchLog.queryStart | date:'dd.MM.yyyy HH:mm'}}</td>
+              <td>
+                {{ searchLog.error ? 'DA' : 'NE' }}
+              </td>
+              <td>
+<!--                <a class="btn btn-primary btn-sm btn-circle mr-2" [routerLink]="[library.id]">-->
+<!--                  <i class="fas fa-search fa-fw"></i>-->
+<!--                </a>-->
+<!--                <a class="btn btn-primary btn-sm btn-circle" [routerLink]="[library.id, 'edit']">-->
+<!--                  <i class="fas fa-pencil-alt fa-fw"></i>-->
+<!--                </a>-->
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+</div>

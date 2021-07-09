@@ -34,7 +34,31 @@
     <li class="nav-item" routerLinkActive="active">
       <a class="nav-link" routerLink="libraries">
         <i class="fas fa-fw fa-building"></i>
-        <span>Knjižnice</span></a>
+        <span>Knjižnice</span>
+      </a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+      Iskanja
+    </div>
+
+    <!-- Nav Item - Libraries -->
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="search-logs">
+        <i class="fas fa-fw fa-history"></i>
+        <span>Seznam</span>
+      </a>
+    </li>
+
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" [routerLink]="['search-logs', 'statistics']">
+        <i class="fas fa-fw fa-chart-pie"></i>
+        <span>Statistika</span>
+      </a>
     </li>
 
     <!-- Divider -->

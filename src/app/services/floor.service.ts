@@ -40,7 +40,7 @@ export class FloorService {
       limit
     };
 
-    return this.http.get<Rack[]>(`${this.url}/${id}/racks`, {observe: 'response', params});
+    return this.http.get<Rack[]>(`${this.url}/${id}/racks`, { observe: 'response', params});
   }
 
   public createOrUpdateRacks(id: string, racks: Rack[]): Observable<HttpResponse<any>> {

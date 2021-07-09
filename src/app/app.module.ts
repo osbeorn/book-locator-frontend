@@ -15,7 +15,7 @@ import {LibrariesComponent} from './content/admin/libraries/libraries.component'
 import {TableModule} from 'primeng/table';
 import {LibraryService} from './services/library.service';
 import {AddEditComponent as LibraryAddEditComponent} from './content/admin/libraries/add-edit/add-edit.component';
-import {ListComponent} from './content/admin/libraries/list/list.component';
+import {ListComponent as LibraryListComponent} from './content/admin/libraries/list/list.component';
 import {FormsModule} from '@angular/forms';
 import {DetailsComponent as LibraryDetailsComponent} from './content/admin/libraries/details/details.component';
 import {FloorsComponent} from './content/admin/libraries/details/floors/floors.component';
@@ -37,9 +37,9 @@ import {SidebarToggleDirective} from './content/directives/sidebar-toggle/sideba
 import {ScrollToTopDirective} from './content/directives/scroll-to-top/scroll-to-top.directive';
 import {StatisticService} from './services/statistic.service';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
-// import {SearchLogsComponent} from './content/admin/search-logs/search-logs.component';
-// import {ListComponent as SearchLogListComponent} from './content/admin/search-logs/list/list.component';
-// import {SearchLogService} from './services/search-log.service';
+import {SearchLogsComponent} from './content/admin/search-logs/search-logs.component';
+import {ListComponent as SearchLogListComponent} from './content/admin/search-logs/list/list.component';
+import {SearchLogService} from './services/search-log.service';
 import {UrlSerializer} from '@angular/router';
 import CustomUrlSerializer from './utils/custom-url.serializer';
 
@@ -55,12 +55,14 @@ declare global {
     DashboardComponent,
     LibrariesComponent,
     LibraryAddEditComponent,
-    ListComponent,
+    LibraryListComponent,
     LibraryDetailsComponent,
     FloorsComponent,
     FloorAddEditComponent,
     ViewComponent,
     FloorDetailsComponent,
+    SearchLogsComponent,
+    SearchLogListComponent,
     LoginComponent,
 
     SidebarToggleDirective,
@@ -101,6 +103,7 @@ declare global {
     LibraryService,
     LookupService,
     SearchService,
+    SearchLogService,
     StatisticService
   ],
   bootstrap: [AppComponent]

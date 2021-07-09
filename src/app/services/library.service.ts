@@ -28,7 +28,7 @@ export class LibraryService {
       limit
     };
 
-    return this.http.get<Library[]>(`${this.url}`, {observe: 'response', params});
+    return this.http.get<Library[]>(`${this.url}`, { observe: 'response', params});
   }
 
   public createLibrary(library: Library): Observable<Library> {
@@ -48,7 +48,7 @@ export class LibraryService {
       limit
     };
 
-    return this.http.get<Floor[]>(`${this.url}/${id}/floors`, {observe: 'response', params});
+    return this.http.get<Floor[]>(`${this.url}/${id}/floors`, { observe: 'response', params});
   }
 
   public createLibraryFloor(id: string, floor: Floor): Observable<Floor> {
